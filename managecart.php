@@ -12,9 +12,10 @@ $task = $_GET['task'];
 $item = $_GET['item'];
 $price = $_GET['price'];
 $name = $_GET['name'];
+$stock = $_GET['stock'];
 
 if ($task == "add") {
-   $cart->addToCart($item,$price,$name);
+   $cart->addToCart($item,$price,$name,$stock);
    $_SESSION["cart"] = $cart->getCart();
 } else if ($task == "remove") {
    $cart->deleteFromCart($item,$price,$name);

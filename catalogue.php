@@ -16,14 +16,15 @@ header('Content-Type: text/html; charset=utf-8');
 		<script src="js/prototype.js" language="JavaScript" type="text/javascript"></script>
 		<script src="js/jquery-1.9.1.min.js" language="JavaScript" type="text/javascript"></script>
 <script type="text/javascript" language="JavaScript">
-function manageCart(task,item,price,name) {
+function manageCart(task,item,price,name,stock) {
    var url = 'managecart.php';
-   var params = 'task=' + task + '&item=' + item + '&price=' + price + '&name=' + name;
+   var params = 'task=' + task + '&item=' + item + '&price=' + price + '&name=' + name + '&stock=' + stock;
    var ajax = new Ajax.Updater(
 	          {success: 'cartResult'},
               url,
               {method: 'get', parameters: params, onFailure: reportError});
 			  $("#cart").load(location.href + " #cart");
+			   $("#products").load(location.href + " #products");
 }
 
 function reportError(request) {
@@ -41,11 +42,7 @@ function reportError(request) {
 			<div id="side-menu">
 				<table>
 					<tr><th>Categories</th></tr>
-					<tr><td><a href="catalogue1.php">Category 1</a></td></tr>
-					<tr><td><a href="catalogue2.php">Category 2</a></td></tr>
-					<tr><td>Category 3</td></tr>
-					<tr><td>Category 4</td></tr>
-					<tr><td>Category 5</td></tr>
+					<tr><td><a href="catalogue.php">Category 1</a></td></tr>
 				</table>
 			</div>
 			<div id="top-right">
@@ -70,8 +67,16 @@ function reportError(request) {
 						$total = 0;
 						echo "<table>";
 						foreach($content as $key=>$value){
-						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."');\"><input type='button' value='-'></a>".$value['quantity']."<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."');\"><input type='button' value='+'></a></td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; $total+=$value['price']*$value['quantity'];
-														 }
+						
+						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".$value['quantity'];
+						
+						if($value['stockLeft'] > 0){
+						echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='+'></a>";
+						}
+						
+						echo "</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
+						$total+=$value['price']*$value['quantity'];
+						}
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
 					?>
@@ -108,10 +113,17 @@ function reportError(request) {
 					echo "<td><p><a href='product.php?id=".$PId.".php'><img src='".$img."' height='100' width='100'></a></p>
 					<p><a href='product.php?id=".$PId.".php'>".$name." <i>(".$SName.")</i></a></p>";
 					if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
-					<p style='text-align:right;'>".$price."€</p>";}
+					<p style='text-align:right;'>".$price."€</p>";
+					}
 					else{
+					if(!isset($_SESSION['cart'][$PId])){$stockLeft = $stock;
+					}
+					else {$stockLeft = $_SESSION['cart'][$PId]['stockLeft'];
+					}
+					if($stockLeft > 0){
 					echo "<p style='text-align:right'>".$price."€</p>
-					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'><input type='button' value='Add to cart'></a></p></td>";
+					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'><input type='button' value='Add to cart'></a></p></td>";
+					}
 					}
 					$i++;
 					} 

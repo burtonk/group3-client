@@ -48,13 +48,13 @@ function reportError(request) {
 			
 			<div id="top-right">
 			<div id="searchBar">
-			<ul class = "searchBar">
-<form action="searchBar">
-   <input type="search" name="search" >
-  <input type="submit">
-</form>
-</ul>
-</div>
+					<ul class = "searchBar">
+						<form name="search" method="post" action="search.php">
+							<input type="text" name="find" >
+							<input type="submit" value="Search">
+						</form>
+					</ul>
+				</div>
 				<div id="login">
 					E-Mail : <input type="text"><br />
 					Password : <input type="text"><br />

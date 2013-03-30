@@ -81,9 +81,12 @@ function reportError(request) {
 							 }
 					?>
 					<a href="viewcart.php"><input type="button" value="View your cart"></a>
-				</div>
-				<div id="myaccount">
+					<div id="myaccount">
 				<a href="CustomerInfo.php">My Information</a>
+					</div>
+				</div>
+			
+		
 				<div id="cart">
 			</div>
 			<div id="products">

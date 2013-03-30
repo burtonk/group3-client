@@ -35,15 +35,14 @@ function reportError(request) {
 <body>
 	<?php session_start(); ?>
 <div id="content">
-			<div id="header">
-				<a href="homepage.php"><img src="images/logo.png" alt="logo" width="200" /></a>
+			
 			</div>
 
 		
 			
 		<div id='cssmenu'>
 <ul>
-<li class='active'><a href="homepage.html"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
    <li class='active'><a href='index.html'><span>Home</span></a></li>
    <li class='has-sub'><a href='#'><span>Products</span></a>
       <ul>

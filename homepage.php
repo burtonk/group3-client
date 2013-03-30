@@ -39,12 +39,32 @@ function reportError(request) {
 				<a href="homepage.php"><img src="images/logo.png" alt="logo" width="200" /></a>
 			</div>
 
-<div id="side-menu">
-				<table>
-					<tr><th>Categories</th></tr>
-					<tr><td><a href="catalogue.php">Category 1</a></td></tr>
-				</table>
-			</div>
+		
+			
+		<div id='cssmenu'>
+<ul>
+<li class='active'><a href="homepage.html"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+   <li class='active'><a href='index.html'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href="catalogue.php"><span>Cat 1</span></a></li>
+         
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+    <li class='last'><a href='#'><span>Reviews</span></a></li>
+</ul>
+</div>	
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			<div id="top-right">
 			<div id="searchBar">

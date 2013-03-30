@@ -57,6 +57,7 @@ Your Shopping Cart contains:
 							 }
    ?>
 </p>
+<a href="checkout.php">Checkout</a>
 <a href="homepage.php">Back to homepage</a>
 </div>
 </body>

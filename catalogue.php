@@ -59,6 +59,8 @@ function reportError(request) {
 					Password : <input type="text"><br />
 					<input type="button" value="Log in">
 				</div>
+				<div id="myaccount">
+				<a href="CustomerInfo.php">My Information</a>
 				<div id="cart">
 					<?php 
 						$content = $_SESSION['cart'];

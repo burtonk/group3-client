@@ -43,7 +43,7 @@ function reportError(request) {
 		<div id='cssmenu'>
 <ul>
 <li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
-   <li class='active'><a href='index.html'><span>Home</span></a></li>
+   <li class='active'><a href='homepage.php'><span>Home</span></a></li>
    <li class='has-sub'><a href='#'><span>Products</span></a>
       <ul>
          <li class='has-sub'><a href="catalogue.php"><span>Cat 1</span></a></li>
@@ -57,15 +57,7 @@ function reportError(request) {
 </div>	
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			<div id="top-right">
+		<div id="top-right">
 			<div id="searchBar">
 					<ul class = "searchBar">
 						<form name="search" method="post" action="search.php">
@@ -109,35 +101,7 @@ function reportError(request) {
 <img src="images/spices.jpg" alt="spices" width="400" />
 </ul>
 
-<ul class = "about">
-<p1>
-At Grad, our mission is to offer high-quality herbs, spices, and seasonings at a fair price in customer-friendly quantities. We strive to remain innovative and provide a fun, inspiring, and educational environment for customers and employees.
-Spice lovers can order a wide variety of products and spices online, from specialty salts to the best spice blends for any recipe!
-</p1>
-</ul>
 
-<ul class="SpecialsTable">
-<table cellpadding="50">
-<tr>
-<td><a href="#" >Suggestion Items</a></td>
-<td><a href="#" >Staff Picks</a></td>
-</tr>
-</table>
-</ul>
-</div>
-
-<div id="padding">
-<ul class="tabs">
-<table cellpadding="50">
-<tr>
-<td><a href="#" >About</a></td>
-<td><a href="#" >Site Map</a></td>
-<td><a href="#" >Reviews</a></td>
-
-</tr>
-</table>
-</ul>
-</div>
 
 </div>
 </body>

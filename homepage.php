@@ -40,7 +40,18 @@ function reportError(request) {
 
 
 
-	
+		/*
+		<div id="top-right">
+			<div id="searchBar">
+					<ul class = "searchBar">
+						<form name="search" method="post" action="search.php">
+							<input type="text" name="find" >
+							<input type="submit" value="Search">
+						</form>
+					</ul>
+				</div>
+				
+			
 				
 				
 				

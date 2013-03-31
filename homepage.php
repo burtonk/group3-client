@@ -38,6 +38,22 @@ function reportError(request) {
 			
 			</div>
 
+	<div id="top-right">
+			<div id="searchBar">
+					<ul class = "searchBar">
+						<form name="search" method="post" action="search.php">
+							<input type="text" name="find" >
+							<input type="submit" value="Search">
+						</form>
+					</ul>
+				</div>
+				<div id="login">
+					E-Mail : <input type="text"><br />
+					Password : <input type="text"><br />
+					<input type="button" value="Log in">
+				</div>
+
+
 		
 			
 		<div id='cssmenu'>
@@ -56,21 +72,7 @@ function reportError(request) {
 </ul>
 </div>	
 			
-			
-		<div id="top-right">
-			<div id="searchBar">
-					<ul class = "searchBar">
-						<form name="search" method="post" action="search.php">
-							<input type="text" name="find" >
-							<input type="submit" value="Search">
-						</form>
-					</ul>
-				</div>
-				<div id="login">
-					E-Mail : <input type="text"><br />
-					Password : <input type="text"><br />
-					<input type="button" value="Log in">
-				</div>
+		
 				<div id="cart">
 					<?php 
 						$content = $_SESSION['cart'];

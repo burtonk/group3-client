@@ -21,7 +21,8 @@ float: right;}
 	text-align: center;
 }
 body {
-background: url(country.jpg) no-repeat fixed 100% 100%;
+background: url(country.jpg) center center no-repeat;
+background-size:100px 150px;
 
 }
 

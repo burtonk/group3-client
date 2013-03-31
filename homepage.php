@@ -42,7 +42,7 @@ function reportError(request) {
 			
 		<div id='cssmenu'>
 <ul>
-<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="560"></a></li> 
+<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
    <li class='active'><a href='homepage.php'><span>Home</span></a></li>
    <li class='has-sub'><a href='#'><span>Products</span></a>
       <ul>
@@ -96,6 +96,8 @@ function reportError(request) {
 				</div>
 			</div>
 <div id="home">
+
+
 
 
 

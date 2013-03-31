@@ -76,7 +76,7 @@ function reportError(request) {
 					
 				<a href="CustomerInfo.php"><input type="button" value="My Information"></a>
 					
-			
+				</div>
 			
 		
 				<div id="cart">

@@ -72,9 +72,9 @@ function reportError(request) {
 							 }
 					?>
 					<a href="viewcart.php"><input type="button" value="View your cart"></a>
-					<div id="myaccount">
+					
 				<a href="CustomerInfo.php">My Information</a>
-					</div>
+					
 				</div>
 			
 		
@@ -82,7 +82,7 @@ function reportError(request) {
 			</div>
 			<div id="products">
 
-				<h1>Category 1</h1>
+				<
 				<table>
 					<tr>
 					<?php
@@ -133,12 +133,12 @@ function reportError(request) {
 				
 <div id='cssmenu'>
 <ul>
-<li class='active'><a href="homepage.html"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
-   <li class='active'><a href='index.html'><span>Home</span></a></li>
+<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+   <li class='active'><a href="homepage.php"><span>Home</span></a></li>
    <li class='has-sub'><a href='#'><span>Products</span></a>
       <ul>
          <li class='has-sub'><a href='#'><span>Cat 1</span></a></li>
-         <li class='has-sub'><a href='#'><span>Cat 2</span></a> </li>
+         
       </ul>
    </li>
    <li><a href='#'><span>About</span></a></li>
@@ -146,11 +146,6 @@ function reportError(request) {
     <li class='last'><a href='#'><span>Reviews</span></a></li>
 </ul>
 </div>
-	
-	
-	
-	
-	
 	
 	
 	

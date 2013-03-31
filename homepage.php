@@ -40,21 +40,36 @@ function reportError(request) {
 
 
 
-		
-		<div id="top-right">
-			<div id="searchBar">
-					<ul class = "searchBar">
-						<form name="search" method="post" action="search.php">
-							<input type="text" name="find" >
-							<input type="submit" value="Search">
-						</form>
-					</ul>
-				</div>
-				<div id="login">
-					E-Mail : <input type="text"><br />
-					Password : <input type="text"><br />
-					<input type="button" value="Log in">
-				</div>
+	
+				
+				
+				
+				
+				
+				
+				
+					<form class="form-1">
+				   <p class="field">
+                   		<input type="text" name="login" placeholder="Username or 								email">
+                   		<i class="icon-user icon-large"></i>
+                   </p>
+                   
+                   <p class="field">
+                   		<input type="password" name="password" placeholder="Password">
+                   		<i class="icon-lock icon-large"></i>
+                   </p>        
+                   
+                   <p class="submit">
+                   <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+                   </p>
+                   </form>
+				
+				
+				
+				
+				
+				
+				
 				<div id="cart">
 					<?php 
 						$content = $_SESSION['cart'];

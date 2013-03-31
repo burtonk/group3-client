@@ -74,7 +74,7 @@ function reportError(request) {
 					
 					<a href="viewcart.php"><input type="button" value="View your 							cart"></a>
 					
-				<a href="CustomerInfo.php"><input type="button" value="My Information"></a>
+	
 					
 				</div>
 			
@@ -148,8 +148,8 @@ function reportError(request) {
 </ul>
 </div>
 	
-	
-	
+				<a href="CustomerInfo.php"><input type="button" value="My Information"></a>
+				
 </ul>
 </div>
 		</div>

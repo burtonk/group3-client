@@ -324,7 +324,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
         inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
   /*  background: linear-gradient(#eeefef, #ffffff 10%);*/
-  background: green;
+  background: white;
 }
  
 .form-1 .field {

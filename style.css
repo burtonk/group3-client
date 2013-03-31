@@ -312,6 +312,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
     padding:10px;
     padding-right: 20px;
     margin-left: 0px;
+    margin-right: 25px;
    
     position: relative; /* For the submit button positioning */
  
@@ -323,7 +324,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
         inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
   /*  background: linear-gradient(#eeefef, #ffffff 10%);*/
-  background: black;
+  background: green;
 }
  
 .form-1 .field {

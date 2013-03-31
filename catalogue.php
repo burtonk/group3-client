@@ -71,11 +71,12 @@ function reportError(request) {
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
 					?>
-					<a href="viewcart.php"><input type="button" value="View your cart"></a>
 					
-				<a href="CustomerInfo.php">My Information</a>
+					<a href="viewcart.php"><input type="button" value="View your 							cart"></a>
 					
-				</div>
+				<a href="CustomerInfo.php"><input type="button" value="My Information"></a>
+					
+			
 			
 		
 				<div id="cart">

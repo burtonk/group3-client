@@ -35,16 +35,7 @@ function reportError(request) {
 		
 	</head>
 	<body>
-		<div id="content">
-			<div id="header">
-				<a href="homepage.php"><img src="images/logo.png" alt="logo" width="200" /></a>
-			</div>
-			<div id="side-menu">
-				<table>
-					<tr><th>Categories</th></tr>
-					<tr><td><a href="catalogue.php">Category 1</a></td></tr>
-				</table>
-			</div>
+	
 			<div id="top-right">
 				<div id="searchBar">
 					<ul class = "searchBar">
@@ -137,18 +128,32 @@ function reportError(request) {
 
 					?>
 					</tr>
-				</table>
-			</div>
-			<div id="padding">
-<ul class="tabs">
-<table cellpadding="50">
-<tr>
-<td><a href="#" >About</a></td>
-<td><a href="#" >Site Map</a></td>
-<td><a href="#" >Reviews</a></td>
-
-</tr>
-</table>
+	
+	
+				
+<div id='cssmenu'>
+<ul>
+<li class='active'><a href="homepage.html"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+   <li class='active'><a href='index.html'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Cat 1</span></a></li>
+         <li class='has-sub'><a href='#'><span>Cat 2</span></a> </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+    <li class='last'><a href='#'><span>Reviews</span></a></li>
+</ul>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
 </ul>
 </div>
 		</div>

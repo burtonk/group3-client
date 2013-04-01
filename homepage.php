@@ -107,7 +107,7 @@ function reportError(request) {
 			<ul>
 				<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
 				<li class='active'><a href='homepage.php'><span>Home</span></a></li>
-				<li class='has-sub'><a href='#'><span>Herbs&Spices</span></a>
+				<li class='active'><a href='catalogue.php'><span>Herbs & Spices</span><a>
 			
 			
 			</li>

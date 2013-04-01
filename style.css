@@ -84,9 +84,9 @@ margin-right: auto;
 width: 500px;
 }
 
-#products tr{
+#products {
 text-align: center;
-text
+float: center;
 background-color: black;
 width : 10px;
 }

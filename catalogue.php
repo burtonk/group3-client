@@ -151,11 +151,12 @@ function reportError(request) {
 					mysqli_close($con);
 
 					?>
-					</ul>
-					</div>
+					
 					</tr>
 	
 				</table>
+				</ul>
+					</div>
 			</div>
 				
 				

@@ -105,7 +105,7 @@ header('Content-Type: text/html; charset=utf-8');
 				<ul>
 					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
 					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
-					<li class='has-sub'><a href='#'><span>Herbs & Spices</span></a></li>
+					<li class='has-sub'><a href='#'><span>Herbs & S</span></a></li>
 					<li><a href='#'><span>About</span></a></li>
 					<li class='last'><a href='#'><span>Contact</span></a></li>
 					<li class='last'><a href='#'><span>Reviews</span></a></li>
@@ -142,9 +142,9 @@ header('Content-Type: text/html; charset=utf-8');
 							$stock = $row['Stock_Level'];
 							if($i % 2 == 0){echo "</tr><tr>";}
 					
-								echo "<td><p><a href='product.php?id=".$PId.".php'>
-								<img src='".$img."' height='100' width='100'></a></p>
-								<p><a href='product.php?id=".$PId.".php'>
+								echo "<td><li class = 'active'><p><a href='product.php?id=".$PId.".php'>
+								<img src='".$img."' height='100' width='100'></a></li></p>
+								<p><i><a href='product.php?id=".$PId.".php'></i>
 								".$name."
 								(".$SName.")</a></p>";
 					
@@ -160,8 +160,26 @@ header('Content-Type: text/html; charset=utf-8');
 								if($stockLeft > 0){
 										echo "<p style='text-align:right'>".$price."€</p>
 										<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'>
-										input type='button' value='Add to cart'></a></p></td>";
+										</i><input type='button' value='Add to cart'></a></p></td>";
 								}
+								
+								
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
 								}
 								$i++;
 								} 

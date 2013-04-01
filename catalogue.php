@@ -124,10 +124,10 @@ function reportError(request) {
 					$SName = $row['S_Name'];
 					$stock = $row['Stock_Level'];
 					if($i % 2 == 0){echo "</tr><tr>";}
-					echo "<td><p><a href='product.php?id=".$PId.".php'><img src='".$img."' height='100' width='100'></a></p>
-					<p><a href='product.php?id=".$PId.".php'>".$name." <i>(".$SName.")</i></a></p>";
+					echo "<td><p><i><a href='product.php?id=".$PId.".php'></i><img src='".$img."' height='100' width='100'></a></p>
+					<p><i><a href='product.php?id=".$PId.".php'></i><i>".$name."</i> <i>(".$SName.")</i></a></p>";
 					if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
-					<p style='text-align:right;'>".$price."€</p>";
+					<i><p style='text-align:right;'>".$price."€</i></p>";
 					}
 					else{
 					if(!isset($_SESSION['cart'][$PId])){$stockLeft = $stock;
@@ -135,8 +135,8 @@ function reportError(request) {
 					else {$stockLeft = $_SESSION['cart'][$PId]['stockLeft'];
 					}
 					if($stockLeft > 0){
-					echo "<p style='text-align:right'>".$price."€</p>
-					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'><input type='button' value='Add to cart'></a></p></td>";
+					echo "<i><p style='text-align:right'>".$price."€</p>
+					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'></i><input type='button' value='Add to cart'></a></p></td>";
 					}
 					}
 					$i++;

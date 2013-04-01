@@ -103,8 +103,7 @@ function reportError(request) {
 				<table>
 					<tr>
 					<?php
-					<div id='cssmenu'>
-					<ul>
+				
 					// Create connection
 					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
 
@@ -140,10 +139,8 @@ function reportError(request) {
 					else {$stockLeft = $_SESSION['cart'][$PId]['stockLeft'];
 					}
 					if($stockLeft > 0){
-					
-					echo "<li class='active'><p style='text-align:right'>".$price."€</p></li>
-					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'>
-					</i><input type='button' value='Add to cart'></a></p></td>";
+					echo "<p style='text-align:right'>".$price."€</p>
+					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'></i><input type='button' value='Add to cart'></a></p></td>";
 					}
 					}
 					$i++;
@@ -151,12 +148,9 @@ function reportError(request) {
 					mysqli_close($con);
 
 					?>
-					
 					</tr>
 	
 				</table>
-				</ul>
-					</div>
 			</div>
 				
 				

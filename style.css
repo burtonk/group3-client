@@ -314,7 +314,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
     padding:10px;
     padding-right: 20px;
     /*positioning of login box*/
-    margin-left: 90px;
+    margin-left: 110px;
     margin-right: 25px;
    
     position: relative; /* For the submit button positioning */

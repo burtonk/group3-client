@@ -91,7 +91,7 @@ background-color: black;
 width : 10px;
 }
 
-#products i {
+#products a {
 	font-family: "American Typewriter";
 	color : red;
 }

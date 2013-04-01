@@ -139,7 +139,7 @@ header('Content-Type: text/html; charset=utf-8');
 							$SName = $row['S_Name'];
 							$stock = $row['Stock_Level'];
 						//	if($i % 2 == 0){
-							echo "</tr><tr>";}
+							echo "</tr><tr>";//}
 					
 								echo "<td><li class = 'active'><p><a href='product.php?id=".$PId.".php'>
 								<img src='".$img."' height='100' width='100'></a></li></p>

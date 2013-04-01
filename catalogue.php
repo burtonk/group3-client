@@ -115,7 +115,7 @@ header('Content-Type: text/html; charset=utf-8');
 					<li class='last'><a href='#'><span>Contact</span></a></li>
 					<li class='last'><a href='#'><span>Reviews</span></a></li>
 				</ul>
-			</div>
+			
 			
 			
 			
@@ -177,7 +177,8 @@ header('Content-Type: text/html; charset=utf-8');
 	
 				</table>
 			</div>
-				
+			</div>
+
 				
 				
 			

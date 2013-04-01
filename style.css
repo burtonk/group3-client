@@ -218,21 +218,6 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 	line-height: 1;
 }
 
-/* The container */
-#cssmenu > ul, #cssmenu > ul ul {
-	display: block;
-	position: relative;
-	width: 250px;
-}
-
-	/* The list elements which contain the links */
-	#cssmenu > ul li {
-		display: block;
-		position: relative;
-		margin: 0;
-		padding: 0;
-		width: 250px;	
-	}
 
 		/* General link styling */
 		#cssmenu > ul li a {

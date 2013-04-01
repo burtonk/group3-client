@@ -308,7 +308,8 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 
 .form-1 {
     /* Size & position */
-    width: 200px;
+    /*width of login box*/
+    width: 220px;
    /* margin: 60px auto 30px;*/
     padding:10px;
     padding-right: 20px;

@@ -40,7 +40,7 @@ function reportError(request) {
 
 
 
-		/*
+		
 		<div id="top-right">
 			<div id="searchBar">
 					<ul class = "searchBar">
@@ -69,10 +69,6 @@ function reportError(request) {
                    		<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
                    </p>
                    </form>
-				
-				
-				
-				
 				
 				
 				

@@ -114,7 +114,7 @@ header('Content-Type: text/html; charset=utf-8');
 			
 			
 					<div id="products">
-
+					<p class='middle'>
 				<table>
 					<tr>
 					<?php
@@ -174,7 +174,7 @@ header('Content-Type: text/html; charset=utf-8');
 	
 				</table>
 			
-			
+					</p>
 			
 			</div>
 			</div>

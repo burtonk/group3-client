@@ -98,7 +98,21 @@ header('Content-Type: text/html; charset=utf-8');
 				
 					</div>
 					
-					
+			</div>
+			
+			
+			
+			<div id='cssmenu'>
+				<ul>
+					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
+					<li class='has-sub'><a href='catalogue.php'><span>Herbs & Spices</span></a></li>
+					<li><a href='#'><span>About</span></a></li>
+					<li class='last'><a href='#'><span>Contact</span></a></li>
+					<li class='last'><a href='#'><span>Reviews</span></a></li>
+				</ul>
+			
+			
 					<div id="products">
 
 				<table>
@@ -148,67 +162,19 @@ header('Content-Type: text/html; charset=utf-8');
 								}
 								
 								
-
-							
+								
 								}
 								$i++;
 								} 
 					mysqli_close($con);
 
 					?>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-			</div>
-			
-			
-			
-			<div id='cssmenu'>
-				<ul>
-					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
-					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
-					<li class='has-sub'><a href='catalogue.php'><span>Herbs & Spices</span></a></li>
-					<li><a href='#'><span>About</span></a></li>
-					<li class='last'><a href='#'><span>Contact</span></a></li>
-					<li class='last'><a href='#'><span>Reviews</span></a></li>
-				</ul>
-			
-			
-			
-			
-			
-													
-								
-								
-								
-							
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-						
 					</tr>
 	
 				</table>
+			
+			
+			
 			</div>
 			</div>
 

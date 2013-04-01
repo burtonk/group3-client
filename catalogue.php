@@ -146,7 +146,10 @@ function reportError(request) {
 					?>
 					</tr>
 	
-	
+				</table>
+			</div>
+				</div>
+				
 				
 <div id='cssmenu'>
 <ul>

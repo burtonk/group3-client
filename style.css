@@ -86,8 +86,14 @@ width: 500px;
 
 #products tr{
 text-align: center;
-background: black;
+text
+background-color: black;
 width : 10px;
+}
+
+#products a {
+	font-family: "American Typewriter";
+	color : red;
 }
 
 

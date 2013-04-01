@@ -25,6 +25,7 @@ float: right;
 body {
 background: url(back.jpg) ;
 background-size: auto auto;
+background-position: fixed;
 
 }
 

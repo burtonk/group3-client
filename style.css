@@ -86,9 +86,8 @@ width: 500px;
 
 #products {
 text-align: center;
-float: center;
-background-color: black;
-/*width : 100px;*/
+float: right;
+
 }
 /*
 #products a {

@@ -149,7 +149,13 @@ header('Content-Type: text/html; charset=utf-8');
 								
 								
 
-					
+							
+								}
+								$i++;
+								} 
+					mysqli_close($con);
+
+					?>
 					
 					
 					
@@ -199,13 +205,7 @@ header('Content-Type: text/html; charset=utf-8');
 								
 								
 								
-								
-								}
-								$i++;
-								} 
-					mysqli_close($con);
-
-					?>
+						
 					</tr>
 	
 				</table>

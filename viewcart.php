@@ -32,7 +32,16 @@ function reportError(request) {
 </head>
 
 <body>
-
+<div id='cssmenu'>
+			<ul>
+				<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
+					<li class='has-sub'><a href='catalogue.php'><span>Herbs & Spices</span></a></li>
+					<li><a href='#'><span>About</span></a></li>
+					<li class='last'><a href='#'><span>Contact</span></a></li>
+					<li class='last'><a href='#'><span>Reviews</span></a></li>
+   		</ul>
+   		</div>	
 <div id="content">
 <p>
 Your Shopping Cart contains:

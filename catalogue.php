@@ -123,7 +123,7 @@ function reportError(request) {
 					$img = $row['Img_location'];
 					$SName = $row['S_Name'];
 					$stock = $row['Stock_Level'];
-					if($i % 3 == 0){echo "</tr><tr>";}
+					if($i % 2 == 0){echo "</tr><tr>";}
 					echo "<td><p><a href='product.php?id=".$PId.".php'><img src='".$img."' height='100' width='100'></a></p>
 					<p><a href='product.php?id=".$PId.".php'>".$name." <i>(".$SName.")</i></a></p>";
 					if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>

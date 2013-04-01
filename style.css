@@ -86,6 +86,7 @@ width: 500px;
 
 #products tr{
 text-align: center;
+background: black;
 }
 
 
@@ -302,7 +303,9 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 		
 		/*end of side menu styling */
 		
-		
+		.form{
+			float: right;
+		}
 		
 		/*login stylin*/
 /*

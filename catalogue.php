@@ -105,12 +105,7 @@ header('Content-Type: text/html; charset=utf-8');
 				<ul>
 					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
 					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
-					<li class='has-sub'><a href='#'><span>Products</span></a>
-						<ul>
-							<li class='has-sub'><a href='#'><span>Cat 1</span></a></li>
-						</ul>
-					</li>
-					
+					<li class='has-sub'><a href='#'><span>Products</span></a></li>
 					<li><a href='#'><span>About</span></a></li>
 					<li class='last'><a href='#'><span>Contact</span></a></li>
 					<li class='last'><a href='#'><span>Reviews</span></a></li>

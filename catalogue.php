@@ -37,6 +37,24 @@ header('Content-Type: text/html; charset=utf-8');
 	
 	<body>
 	
+		<div id='cssmenu'>
+				<ul>
+					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
+					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
+					<li class='has-sub'><a href='#'><span>Products</span></a>
+						<ul>
+							<li class='has-sub'><a href='#'><span>Cat 1</span></a></li>
+						</ul>
+					</li>
+					
+					<li><a href='#'><span>About</span></a></li>
+					<li class='last'><a href='#'><span>Contact</span></a></li>
+					<li class='last'><a href='#'><span>Reviews</span></a></li>
+				</ul>
+			</div>
+	
+	
+	
 			<div id="top-right">
 				<div id="searchBar">
 					<ul class = "searchBar">
@@ -158,21 +176,7 @@ header('Content-Type: text/html; charset=utf-8');
 				
 				
 				
-			<div id='cssmenu'>
-				<ul>
-					<li class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></li> 
-					<li class='active'><a href="homepage.php"><span>Home</span></a></li>
-					<li class='has-sub'><a href='#'><span>Products</span></a>
-						<ul>
-							<li class='has-sub'><a href='#'><span>Cat 1</span></a></li>
-						</ul>
-					</li>
-					
-					<li><a href='#'><span>About</span></a></li>
-					<li class='last'><a href='#'><span>Contact</span></a></li>
-					<li class='last'><a href='#'><span>Reviews</span></a></li>
-				</ul>
-			</div>
+			
 			
 
 	

@@ -99,11 +99,12 @@ function reportError(request) {
 			
 			<div id="products">
 
-				<
+				
 				<table>
 					<tr>
 					<?php
-				
+					<div id='cssmenu'>
+					<ul>
 					// Create connection
 					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
 
@@ -124,8 +125,12 @@ function reportError(request) {
 					$SName = $row['S_Name'];
 					$stock = $row['Stock_Level'];
 					if($i % 2 == 0){echo "</tr><tr>";}
-					echo "<td><p><i><a href='product.php?id=".$PId.".php'></i><img src='".$img."' height='100' width='100'></a></p>
-					<p><i><a href='product.php?id=".$PId.".php'></i><i>".$name."</i> <i>(".$SName.")</i></a></p>";
+					
+					echo "<td><li class = 'active'><p><a href='product.php?id=".$PId.".php'>
+						  <img src='".$img."' height='100' width='100'></a></li></p>
+						  <p><i><a href='product.php?id=".$PId.".php'></i>
+						  ".$name."
+						  (".$SName.")</a></p>";
 					if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
 					<i><p style='text-align:right;'>".$price."€</i></p>";
 					}
@@ -135,8 +140,10 @@ function reportError(request) {
 					else {$stockLeft = $_SESSION['cart'][$PId]['stockLeft'];
 					}
 					if($stockLeft > 0){
-					echo "<i><p style='text-align:right'>".$price."€</p>
-					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'></i><input type='button' value='Add to cart'></a></p></td>";
+					
+					echo "<li class='active'><p style='text-align:right'>".$price."€</p></li>
+					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'>
+					</i><input type='button' value='Add to cart'></a></p></td>";
 					}
 					}
 					$i++;
@@ -144,11 +151,13 @@ function reportError(request) {
 					mysqli_close($con);
 
 					?>
+					</ul>
+					</div>
 					</tr>
 	
 				</table>
 			</div>
-				</div>
+				
 				
 				
 <div id='cssmenu'>
@@ -166,7 +175,7 @@ function reportError(request) {
     <li class='last'><a href='#'><span>Reviews</span></a></li>
 </ul>
 </div>
-	
+				</div>
 	
 	
 </ul>

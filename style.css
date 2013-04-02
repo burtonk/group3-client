@@ -183,19 +183,17 @@ table.menu
 	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;
 	border-collapse: collapse;	
 	border-style: hidden;	
-	border-top-right-radius: 4px;
 	background-color: black;
-	border-top-left-radius: 4px;
 	margin-top: 30px;
-	margin-left:200px;
+	
 	padding-right: 40px;
+	float:right;
 	}
 	
 	
 
-td {
+td{
 padding: 20px;
-max-width: 250px;
 border-bottom: 1px solid #097BB0;
 }
 

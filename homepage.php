@@ -104,7 +104,7 @@ function reportError(request) {
    		</div>
    		  <table class ='menu'>
    		<tr>
-   			<td><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></td>
+   			
 	   		<td><a href="homepage.php"><span>Home</span></a></td>
 	   		<td><a href="catalogue.php"><span>Herbs & Spices</span></a></td>
 	   		<td><a href="#"><span>Contact</span></a></td>

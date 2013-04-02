@@ -87,11 +87,11 @@ function reportError(request) {
 							echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".												$value['stockLeft'].");\"><input type='button' value='+'></a>";
 						}
 						
-						echo 	"</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
+						echo 	"</td><td align='right'>".$value['price']*$value['quantity']."â¬</td></tr>"; 
 								$total+=$value['price']*$value['quantity'];
 						}
 						
-						echo 	"<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
+						echo 	"<tr><td>Total</td><td colspan='2' align='right'>".$total."â¬</td></tr></table>"; 
 							 }
 					?>
 					<a href="viewcart.php"><input type="button" value="View your cart"></a>
@@ -121,13 +121,7 @@ function reportError(request) {
 	   	
 	   	<div id="about">
 	   	<p>
-	   	Welcome to the first Gardening Site with a Balkan Flavour
-	   	Here you will find a selection of the best savoury Balkan Spices, especially those most popular in Bulgaria:
-	   	Chubritza, Sharena Sol [colourful salt], Dzhodzhen [Balkan peppermint], Oregano, Sminduh, Bosilek (Basil).
-	   	We follow best practice in all gardening activities, whether urban or country, according guidelines such as those of the Botanic Gardens.
-	   	We are located in County Kildare, the Horse County of Ireland, where natural products are available for the entusiastic gardener.
-We have at our disposal, access to Teagasc online, to assist with any reasearch related problems you might have.
-	   	
+	   Gradinata is a truly excellent company, I would thoroughly recommend them!
 	   	</p>
 	   	</div>
 	   	

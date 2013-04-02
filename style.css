@@ -179,7 +179,7 @@ padding:10px;
 
 
 /* Reset side menu*/
-ul#cssmenu > ul, #cssmenu > ul ul {
+table#cssmenu > table, #cssmenu > table {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -191,14 +191,14 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 
 
 /* The container */
-#cssmenu > ul, #cssmenu > ul ul {
+#cssmenu > table, #cssmenu > table {
 	display: block;
 	/*position: relative;*/
 	width: 150px;
 }
 
 	/* The list elements which contain the links */
-	#cssmenu > ul td {
+	#cssmenu > table td {
 		display: block;
 	/*	position: relative;*/
 		margin: 0;
@@ -207,7 +207,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 	}
 
 		/* Some stylesheet reset */
-ul#cssmenu > ul, #cssmenu > ul ul {
+table#cssmenu > table, #cssmenu > table {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -217,7 +217,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 
 
 		/* General link styling */
-		#cssmenu > ul td a {
+		#cssmenu > table td a {
 			/* Layout */
 			display: block;
 			position: relative;
@@ -241,14 +241,14 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 		}
 
 		/* Rounded corners for the first link of the menu/submenus */
-		#cssmenu > ul td:first-child>a {
+		#cssmenu > table td:first-child>a {
 			border-top-left-radius: 4px;
 			border-top-right-radius: 4px;
 			border-top: 0;
 		}
 
 		/* Rounded corners for the last link of the menu/submenus */
-		#cssmenu > ul td:last-child>a {
+		#cssmenu > table td:last-child>a {
 			border-bottom-left-radius: 4px;
 			border-bottom-right-radius: 4px;
 			border-bottom: 0;
@@ -256,7 +256,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 
 
 		/* The hover state of the menu/submenu links */
-		#cssmenu > ul td>a:hover, #cssmenu > ul td:hover>a {
+		#cssmenu > table td>a:hover, #cssmenu > table td:hover>a {
 			color: #fff;
 			text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
 			background: #d4b800;
@@ -271,7 +271,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 
 	
 		/* THE SUBMENUS */
-		#cssmenu > ul ul {
+		#cssmenu >table {
 			position: absolute;
 			left: 220px;	/*pos of start of sub menu*/
 			top: -9999px;
@@ -285,7 +285,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 		}
 
 		/* Showing the submenu when the user is hovering the parent link */
-		#cssmenu > ul td:hover>ul {
+		#cssmenu > table td:hover>table {
 			top: 0px;
 			opacity: 1;
 		}

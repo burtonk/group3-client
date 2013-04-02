@@ -98,10 +98,7 @@ function reportError(request) {
 				</div>
 			</div>
 			
-				
-   		<div id="hlogo">
-   		<a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a>
-   		</div>
+		
    		  <table class ='menu'>
    		<tr>
    			
@@ -113,6 +110,11 @@ function reportError(request) {
 	   		</tr>
 	   		
 	   	</table>
+	   	
+	   			
+   		<div id="hlogo">
+   		<a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a>
+   		</div>
    		
 </body>
 </html>

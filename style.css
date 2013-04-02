@@ -186,11 +186,12 @@ table.menu
 	border-top-right-radius: 4px;
 	background-color: black;
 	border-top-left-radius: 4px;
-	padding-top : 40px;
+	padding: 20px;
+	max-width: 250px;
+	border-bottom: 1px solid #097BB0;
+	
 	}
 	
-	
-
 
 table.menu span{
 	color : green;

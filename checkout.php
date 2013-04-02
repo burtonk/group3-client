@@ -56,23 +56,50 @@ Your Shopping Cart contains:
    if(empty($content)){echo "Your cart is currently empty";}
    	else {
 						$total = 0;
-						echo "<table>";
+						echo "<table>
+						<form method='post' action='check.php'>";
 						foreach($content as $key=>$value){
+						
 
 						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=		\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".$value['quantity'];
 
 						if($value['stockLeft'] > 0){
 						echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='+'></a>";
+						
 						}
 
 						echo "</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
 						$total+=$value['price']*$value['quantity'];
+						
+						
+						
+						
+						echo"	
+						
+							<input type='hidden' name='name' value='\''.$value['name'].'\''>	
+							<input type='hidden' name='Quantity' value='\''.$value['quantity'].'\''>
+							<input type='hidden' name='Total Price' value='\''.$value['price']*$value['quantity']'\''>	
+							<input type='hidden' name='Order_Item_Id' value='\''.$key.'\''>
+						";
 						}
+						echo" <input type='submit' value='checkout'>
+								</form>";
+								
+								
+						
+						
+	
+	
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
    ?>
 </p>
 <a href="homepage.php">Back to homepage</a>
+
+
+
+
+
 
 
 <h2>Add Order To Database </h2>

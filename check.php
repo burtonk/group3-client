@@ -22,17 +22,17 @@ header('Content-Type: text/html; charset=utf-8');
 						}
 
 				$sql="INSERT INTO the_order (Email, Total_Price, 	Delivary_Address, Date1, Progress)
+				VALUES('niamh@tcd.ie',".$_POST['Total_Price_All'].",'AHHHH',CURDATE(),1)";
 				
+				echo $sql."<br />";
 				
-				
-				VALUES
-				('niamh@tcd.ie','$_POST['Total_Price_All'],'AHHHH',CURDATE(),1)";
+				$result = mysqli_query($con,$sql);
 
-				$result = mysqli_query($con,"SELECT MAX(Order_Id) FROM the_order");
+				$result2 = mysqli_query($con,"SELECT MAX(OrderId) FROM the_order");
 
-				while($row = mysqli_fetch_array($result)){
+				while($row = mysqli_fetch_array($result2)){
 				
-				$orderID = $row['Order_Id'];
+				$orderID = $row['MAX(OrderId)'];
 				}
 				
 				
@@ -40,22 +40,21 @@ header('Content-Type: text/html; charset=utf-8');
 				
 				
 				
+				$i = $_POST['i'];
+				$j = 0;
+				
+				while($j < $i){
 				
 				
-				
-				$sql="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Item_Id,Email)
-				
-				
-				
-				VALUES
-				("$_POST['name']",'$_POST['Quantity'],$_POST['Total_Price'],$orderID,'niamh@tcd.ie')";
+				$sql2="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Id,Email)
+				VALUES('".$_POST['name'.$j.'']."',".$_POST['Quantity'.$j.''].",".$_POST['Total_Price'.$j.''].",".$orderID.",'niamh@tcd.ie')";
 
+				$result3 = mysqli_query($con,$sql2);
 
-
-					if (!mysqli_query($con,$sql))		
-					{
-					die('Error: ' . mysqli_error());
+					$j++;
+					echo $sql2."<br />";
 					}
+					
 					echo "Order has been added";
 
 					mysqli_close($con);

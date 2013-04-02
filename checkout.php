@@ -58,6 +58,9 @@ Your Shopping Cart contains:
 						$total = 0;
 						echo "<table>
 						<form method='post' action='check.php'>";
+						
+						$i = 0;
+						
 						foreach($content as $key=>$value){
 						
 
@@ -76,13 +79,15 @@ Your Shopping Cart contains:
 						
 						echo"	
 						
-							<input type='hidden' name='name' value='\''.$value['name'].'\''>	
-							<input type='hidden' name='Quantity' value='\''.$value['quantity'].'\''>
-							<input type='hidden' name='Total Price' value='\''.$value['price']*$value['quantity']'\''>	
-							<input type='hidden' name='Order_Item_Id' value='\''.$key.'\''>
-							<input type='hidden' name='Total_Price_All' value='\''$total'\''> ";						
+							<input type='hidden' name='name".$i."' value='".$value['name']."'>	
+							<input type='hidden' name='Quantity".$i."' value='".$value['quantity']."'>
+							<input type='hidden' name='Total Price".$i."' value='".$value['price']*$value['quantity']."'>	
+							<input type='hidden' name='Order_Item_Id".$i."' value='".$key."'>
+							<input type='hidden' name='Total_Price_All' value='".$total."'> ";
+							$i++;
 						}
-						echo" <input type='submit' value='checkout'>
+						echo" 	<input type='hidden' name='i' value='".$i."'>
+								<input type='submit' value='checkout'>
 								</form>";
 								
 								
@@ -91,6 +96,8 @@ Your Shopping Cart contains:
 	
 
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
+						
+						}
 
    ?>
 </p>

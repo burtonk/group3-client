@@ -1,5 +1,6 @@
 <?php 
 include 'cart.class.php';
+include 'config/details.php';
 session_start();
 if(!isset ($_SESSION['cart'])){
 $cart = new Shopping_Cart();
@@ -12,8 +13,14 @@ header('Content-Type: text/html; charset=utf-8');
 	<head>
 		<title>Customer site</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="jquery.rating.css" />
 		<script src="js/prototype.js" language="JavaScript" type="text/javascript"></script>
 		<script src="js/jquery-1.9.1.min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="js/jquery.js" language="JavaScript" type="text/javascript"></script>
+		<script src="js/jquery.form.js" language="JavaScript" type="text/javascript"></script>
+		<script src="js/jquery.MetaData.js" language="JavaScript" type="text/javascript"></script>
+		<script src="js/jquery.rating.pack.js" language="JavaScript" type="text/javascript"></script>
+		
 <script type="text/javascript" language="JavaScript">
 function manageCart(task,item,price,name) {
    var url = 'managecart.php';
@@ -33,15 +40,6 @@ function reportError(request) {
 	</head>
 	<body>
 		<div id="content">
-			<div id="header">
-				<a href="homepage.php"><img src="images/logo.png" alt="logo" width="200" /></a>
-			</div>
-			<div id="side-menu">
-				<table>
-					<tr><th>Categories</th></tr>
-					<tr><td><a href="catalogue.php">Category 1</a></td></tr>
-				</table>
-			</div>
 			<div id="top-right">
 				<div id="searchBar">
 					<ul class = "searchBar">
@@ -52,10 +50,25 @@ function reportError(request) {
 					</ul>
 				</div>
 				<div id="login">
-					E-Mail : <input type="text"><br />
-					Password : <input type="text"><br />
-					<input type="button" value="Log in">
+				<form class="form-1">
+				   <p class="field">
+                   		<input type="text" name="login" placeholder="Username or email">
+                   		<i class="icon-user icon-large"></i>
+                   </p>
+                   
+                   <p class="field">
+                   		<input type="password" name="password" placeholder="Password">
+                   		<i class="icon-lock icon-large"></i>
+                   </p>        
+                   
+                   <p class="submit">
+                   		<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+                   </p>
+				    <a href="createAccount.php">Create an account</a>
+                   </form>
 				</div>
+				
+				
 				<div id="cart">
 					<?php 
 						$content = $_SESSION['cart'];
@@ -65,28 +78,43 @@ function reportError(request) {
 						echo "<table>";
 						foreach($content as $key=>$value){
 						
-						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".$value['quantity'];
+						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".										  $value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><img src='remove.png' alt='-'></a>   ".												$value['quantity'];
 						
 						if($value['stockLeft'] > 0){
-						echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='+'></a>";
-						}
+								echo "   <a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".													$value['stockLeft'].");\"><img src='add.png' alt='+'></a>";
+								}
 						
 						echo "</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
-						$total+=$value['price']*$value['quantity'];
+								$total+=$value['price']*$value['quantity'];
 						}
+						
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
 					?>
-					<a href="viewcart.php"><input type="button" value="View your cart"></a>
+					
+					<a href="checkout.php" class="button">TO CHECKOUT</a>
+					<a href="CustomerInfo.php" class="button">MY INFORMATIONS</a>
+					
 				</div>
 			</div>
-			<div id="product-details">
+			
+			<div id='cssmenu'>
+<ul>
+<li class='active'><a href="homepage.php"><img src="gradinatas.jpg" alt="logo" width="160"></a></li> 
+   <li class='active'><a href="homepage.php"><span>Home</span></a></li>
+   <li class='has-sub'><a href='catalogue.php'><span>Products</span></a></li>
+   <li><a href='about.php'><span>About</span></a></li>
+   <li class='last'><a href='contact.php'><span>Contact</span></a></li>
+</ul>
+</div>
+			
+			<div id="products">
 			<?php
 			
 					$id = $_GET['id'];
 					
 					// Create connection
-					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
+					$con=mysqli_connect($host,$logname,$pass,$db);
 
 					// Check connection
 					if (mysqli_connect_errno($con)){
@@ -125,24 +153,59 @@ function reportError(request) {
 						<td>
 							<?php
 							if($stock <= 0){echo "<p>Out of stock</p>";}
-							else {echo "<a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'><input type='button' value='Add to cart'></a>";}
+							else {echo "<a href='#' class='button' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'>ADD TO CART</a>";}
 							?>
 						</td>
 					</tr>
 				</table>
-			</div>
-			<div id="padding">
-<ul class="tabs">
-<table cellpadding="50">
-<tr>
-<td><a href="#" >About</a></td>
-<td><a href="#" >Site Map</a></td>
-<td><a href="#" >Reviews</a></td>
+				<h3>Reviews</h3>
+				<table>
+					<tr>
+						<form action="review.php" method="post">
+						<td>Your rating</td><td>
+						<input class="star required" type="radio" name="rating" value="1">
+						<input class="star" type="radio" name="rating" value="2">
+						<input class="star" type="radio" name="rating" value="3">
+						<input class="star" type="radio" name="rating" value="4">
+						<input class="star" type="radio" name="rating" value="5"></td></tr>
+						<tr><td>Your email</td><td><input type="text" name="email"></td></tr>
+						<tr><td>Your comment</td><td><input type="text" name="comment"></td></tr>
+						<input type="hidden" name="id" value=<?php echo "\"".$id."\""; ?>>
+						<tr><td><input type="submit" value="Submit review"></td><td /></tr>
+						</form>
+						<?php
+					
+					// Create connection
+					$con=mysqli_connect($host,$logname,$pass,$db);
 
-</tr>
-</table>
-</ul>
-</div>
+					// Check connection
+					if (mysqli_connect_errno($con)){
+						echo "Failed to connect to MySQL: " . mysqli_connect_error();
+					}
+
+					$result = mysqli_query($con,"SELECT * FROM reviews WHERE Product_Id = '".$id."' ORDER BY Date1 DESC, Time1 DESC");
+					
+					while($row = mysqli_fetch_array($result)){
+					$email = $row['Email'];
+					$rating = $row['Stars'];
+					$comment = $row['Comments'];
+					$date = $row['Date1'];
+					$time = $row['Time1'];
+					
+					$i = 0;
+					$stars = "";
+					
+					while($i < $rating){$stars.="<img src='images/star.png' alt='star'>"; $i++;}
+					
+					echo "<tr><td>Rated ".$stars." by ".$email." on ".$date." ".$time."</td></tr>
+					<tr><td>Comment : ".$comment."</td></tr>";
+					
+					} 
+					mysqli_close($con);
+					
+					?>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>

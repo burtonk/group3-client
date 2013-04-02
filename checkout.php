@@ -113,26 +113,6 @@ Your Shopping Cart contains:
 
 
 
-
-
-<h2>Add Order To Database </h2>
-			<?php
-			//this info should be taken from cart and from login info and then sent to check.php file 			//to be added to the database.At the moment the data is being inputted manually
-			?>
-		
-			<form action="check.php" method="post">
-			<ul>
-			<li>Email: <input type="text" name="Email"></li>
-			<li>Order_Id: <input type="text" name="Order_Id"></li>
-			<li>Product_items <input type="text" name="Product_itmes"></li>
-			<li>Total_Price <input type="text" name="Total_Price"></li>
-			<li>Delivery_Address: <input type="text" name="Delivery_Address"></li>
-			<li>Date1 <input type="text" name="Date1"></li>
-			<li>Progress <input type="text" name="S_Name"></li>
-			<br>
-			<input type="submit" value="Save">
-			</ul>
-			</form>
 </div>
 </body>
 </html>

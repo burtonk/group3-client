@@ -1,5 +1,6 @@
 <?php 
 include 'cart.class.php';
+include 'config/details.php';
 session_start();
 if(!isset ($_SESSION['cart'])){
 $cart = new Shopping_Cart();
@@ -37,15 +38,6 @@ function reportError(request) {
 	</head>
 	<body>
 		<div id="content">
-			<div id="header">
-				<a href="homepage.php"><img src="images/logo.png" alt="logo" width="200" /></a>
-			</div>
-			<div id="side-menu">
-				<table>
-					<tr><th>Categories</th></tr>
-					<tr><td><a href="catalogue.php">Category 1</a></td></tr>
-				</table>
-			</div>
 			<div id="top-right">
 				<div id="searchBar">
 					<ul class = "searchBar">
@@ -56,9 +48,22 @@ function reportError(request) {
 					</ul>
 				</div>
 				<div id="login">
-					E-Mail : <input type="text"><br />
-					Password : <input type="text"><br />
-					<input type="button" value="Log in">
+				<form class="form-1">
+				   <p class="field">
+                   		<input type="text" name="login" placeholder="Username or email">
+                   		<i class="icon-user icon-large"></i>
+                   </p>
+                   
+                   <p class="field">
+                   		<input type="password" name="password" placeholder="Password">
+                   		<i class="icon-lock icon-large"></i>
+                   </p>        
+                   
+                   <p class="submit">
+                   		<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+                   </p>
+				    <a href="createAccount.php">Create an account</a>
+                   </form>
 				</div>
 				<div id="cart">
 					<?php 
@@ -69,30 +74,44 @@ function reportError(request) {
 						echo "<table>";
 						foreach($content as $key=>$value){
 						
-						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".$value['quantity'];
+						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".										  $value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><img src='remove.png' alt='-'></a>   ".												$value['quantity'];
 						
 						if($value['stockLeft'] > 0){
-						echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='+'></a>";
-						}
+								echo "   <a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".													$value['stockLeft'].");\"><img src='add.png' alt='+'></a>";
+								}
 						
 						echo "</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
-						$total+=$value['price']*$value['quantity'];
+								$total+=$value['price']*$value['quantity'];
 						}
+						
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
 					?>
-					<a href="viewcart.php"><input type="button" value="View your cart"></a>
+					
+					<a href="checkout.php" class="button">TO CHECKOUT</a>
+					<a href="CustomerInfo.php" class="button">MY INFORMATIONS</a>
+					
 				</div>
 			</div>
+			
+			<div id='cssmenu'>
+<ul>
+<li class='active'><a href="homepage.php"><img src="gradinatas.jpg" alt="logo" width="160"></a></li> 
+   <li class='active'><a href="homepage.php"><span>Home</span></a></li>
+   <li class='has-sub'><a href='catalogue.php'><span>Products</span></a></li>
+   <li><a href='about.php'><span>About</span></a></li>
+   <li class='last'><a href='contact.php'><span>Contact</span></a></li>
+</ul>
+</div>
+
 			<div id="products">
 
-				<h1>Search results for "<?php echo $find; ?>"</h1>
-				<table>
-					<tr>
+				<h2>Search results for "<?php echo $find; ?>"</h2>
+				<table class="center">
 					<?php
 				
 					// Create connection
-					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
+					$con=mysqli_connect($host,$logname,$pass,$db);
 
 					// Check connection
 					if (mysqli_connect_errno($con)){
@@ -100,8 +119,6 @@ function reportError(request) {
 					}
 
 					$result = mysqli_query($con,"SELECT * FROM product WHERE name LIKE '%".$find."%'");
-					
-					$i=0;
 		
 					while($row = mysqli_fetch_array($result)){
 					$name = $row['Name'];
@@ -110,11 +127,12 @@ function reportError(request) {
 					$img = $row['Img_location'];
 					$SName = $row['S_Name'];
 					$stock = $row['Stock_Level'];
-					if($i % 3 == 0){echo "</tr><tr>";}
-					echo "<td><p><a href='product.php?id=".$PId.".php'><img src='".$img."' height='100' width='100'></a></p>
-					<p><a href='product.php?id=".$PId.".php'>".$name." <i>(".$SName.")</i></a></p>";
+					$weight = $row['Weight'];
+					echo "<tr><td><a href='product.php?id=".$PId."'><img src='".$img."' height='100' width='100'></a></td>
+					<td><p><a href='product.php?id=".$PId."'>".$name." <i>(".$SName.")</i></a></p>
+					<p>Weight : ".$weight."g</p>";
 					if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
-					<p style='text-align:right;'>".$price."€</p>";
+					<p style='text-align:right;'>".$price."€</p></td></tr>";
 					}
 					else{
 					if(!isset($_SESSION['cart'][$PId])){$stockLeft = $stock;
@@ -123,29 +141,15 @@ function reportError(request) {
 					}
 					if($stockLeft > 0){
 					echo "<p style='text-align:right'>".$price."€</p>
-					<p><a href='#' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'><input type='button' value='Add to cart'></a></p></td>";
+					<p><a href='#' class='button' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\",".$stockLeft.");'>ADD TO CART</a></p></td></tr>";
 					}
 					}
-					$i++;
 					} 
 					mysqli_close($con);
 
 					?>
-					</tr>
 				</table>
 			</div>
-			<div id="padding">
-<ul class="tabs">
-<table cellpadding="50">
-<tr>
-<td><a href="#" >About</a></td>
-<td><a href="#" >Site Map</a></td>
-<td><a href="#" >Reviews</a></td>
-
-</tr>
-</table>
-</ul>
-</div>
 		</div>
 	</body>
 </html>

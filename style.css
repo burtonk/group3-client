@@ -18,7 +18,7 @@ padding:10px;
 }
 */
 #top-right{
-margin-top: 50px;
+margin-top: 180px;
 float: right;
 }
 
@@ -49,29 +49,7 @@ height: auto;
 padding:10px;
 }
 
-#side-menu{
-float: left;
-margin-top: 110px;
-margin-left: 10px;
-margin-right: 10px;
-}
 
-#side-menu th{
-border-radius: 5px;
-background-color: black;
-color: white;
-padding-right: 50px;
-}
-
-#side-menu td{
-border-radius: 5px;
-background-color: #8B0000;
-color: white;
-}
-
-#side-menu a {
-color: white;
-}
 
 #padding{
 margin-left: auto;
@@ -186,7 +164,7 @@ table.menu
 	border-collapse: collapse;	
 	border-style: hidden;	
 	background-color: black;
-	margin-top: 90px;
+	margin-top: 140px;
 	padding-right: 40px;
 	float:right;
 	margin-left: -20px;

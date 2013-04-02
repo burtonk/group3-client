@@ -178,6 +178,22 @@ padding:10px;
 
 
 
+
+
+
+#menu > tr{
+padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 /* Reset side menu*/
 table#cssmenu > table, #cssmenu > table {
 	list-style: none;

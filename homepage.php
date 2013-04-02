@@ -119,17 +119,17 @@ function reportError(request) {
 	   		
 	   	</table>
 	   	
-	   	
+	   	<div id="about">
 	   	<p>
 	   	Welcome to the first Gardening Site with a Balkan Flavour
 	   	Here you will find a selection of the best savoury Balkan Spices, especially those most popular in Bulgaria:
 	   	Chubritza, Sharena Sol [colourful salt], Dzhodzhen [Balkan peppermint], Oregano, Sminduh, Bosilek (Basil).
 	   	We follow best practice in all gardening activities, whether urban or country, according guidelines such as those of the Botanic Gardens.
 	   	We are located in County Kildare, the Horse County of Ireland, where natural products are available for the entusiastic gardener.
-	   	We have at our disposal, access to Teagasc online, to assist with any reasearch related problems you might have.
+We have at our disposal, access to Teagasc online, to assist with any reasearch related problems you might have.
 	   	
 	   	</p>
-	   	
+	   	</div>
 	   	
    		
 </body>

@@ -114,7 +114,7 @@ header('Content-Type: text/html; charset=utf-8');
 	   		
 	   	</table>
 			
-			
+				<div ="contents">
 					<div id="products">
 					<p class='middle'>
 				<table>
@@ -177,7 +177,7 @@ header('Content-Type: text/html; charset=utf-8');
 				</table>
 			
 					</p>
-			
+					</div>
 			</div>
 			</div>
 

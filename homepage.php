@@ -101,6 +101,7 @@ function reportError(request) {
 						
 		<div id='cssmenu'>
 			<ul>
+			<table>
 			<tr>
 				<td class='active'><a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a></td>
 				<td class='active'><a href="homepage.php"><span>Home</span></a></td>
@@ -109,6 +110,7 @@ function reportError(request) {
 					<td class='last'><a href='#'><span>Contact</span></a></td>
 					<td class='last'><a href='#'><span>Reviews</span></a></td>
 			</tr>
+			</table>
    		</ul>
    		</div>	
 

@@ -23,6 +23,10 @@ margin-top: 20px;
 float: right;
 }
 
+#products{
+	float: right;
+	text-align: center;
+}
 
 
 body {

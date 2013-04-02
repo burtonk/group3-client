@@ -144,9 +144,9 @@ header('Content-Type: text/html; charset=utf-8');
 					
 								echo "<td><li class = 'active'><p><a href='product.php?id=".$PId.".php'>
 								<img src='".$img."' height='100' width='100'></a></li></p>
-								<p><i><a href='product.php?id=".$PId.".php'></i>
+								<p><span><i><a href='product.php?id=".$PId.".php'></i>
 								".$name."
-								(".$SName.")</a></p>";
+								(".$SName.")</a></p></span>";
 					
 							if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
 								<i><p style='text-align:right;'>".$price."€</i></p>";

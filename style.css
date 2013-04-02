@@ -44,8 +44,10 @@ background-attachment: fixed;
 	padding-left: 60px;
 	padding-right: 60px;
 	padding-top:20px;
-	padding-bottom: 150px;
+	padding-bottom: 80px;
 	font-family: "Handwriting - Dakota";
+	border: 2px solid;
+	border-radius: 25px;
 
 }
 

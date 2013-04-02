@@ -11,15 +11,15 @@ padding-right: 10px;
 }
 
 #login{
-background-color: #778899;
 text-align: right;
 color: white;
 padding:10px;
+margin-left: 50px;
 }
 
 
 #top-right{
-margin-top: 180px;
+margin-top: 220px;
 float: right;
 }
 

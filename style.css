@@ -176,8 +176,8 @@ padding:10px;
 
 
 
-
-table {	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;	background: #E1F8FF;
+table.menu
+{	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;	background: #E1F8FF;
 	border-collapse: collapse;	border-style: hidden;	
 	}
 	

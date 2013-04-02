@@ -180,8 +180,9 @@ table.menu
 {
 
 
-	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;	background: #E1F8FF;
-	border-collapse: collapse;	border-style: hidden;	
+	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;
+	border-collapse: collapse;	
+	border-style: hidden;	
 	}
 	
 	
@@ -190,9 +191,13 @@ td {
 padding: 20px;
 max-width: 250px;
 background-color: black;
-color: green;
 border-bottom: 1px solid #097BB0;
 }
+
+table.menu span{
+	color : green;
+}
+
 
 
 

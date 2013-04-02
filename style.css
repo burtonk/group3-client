@@ -37,7 +37,7 @@ background-attachment: fixed;
 	margin-top: 100px;
 	background: black;
 	margin-top: 200px;
-	color: gray;
+	color: white;
 	text-align: center;
 	margin-left: 180px;
 	margin-right: 290px;
@@ -47,7 +47,7 @@ background-attachment: fixed;
 	padding-bottom: 80px;
 	font-family: "Handwriting - Dakota";
 	border: 2px solid;
-	border-radius: 25px;
+	border-radius: 15px;
 
 }
 

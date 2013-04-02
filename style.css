@@ -106,8 +106,8 @@ p.middle {
 
 
 #cartcontent{
-	float: right;
-	margin-top: auto;
+	float: left;
+	margin-top: 100px;
 }
 
 

@@ -185,9 +185,8 @@ table.menu
 	border-style: hidden;	
 	background-color: black;
 	margin-top: 30px;
-	
 	padding-right: 40px;
-	float:right;
+	float:inherit;
 	}
 	
 	

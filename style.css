@@ -26,6 +26,7 @@ float: right;
 #products{
 	float: right;
 	text-align: center;
+	background: red;
 }
 
 

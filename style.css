@@ -199,7 +199,7 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 }
 
 	/* The list elements which contain the links */
-	#cssmenu > ul li {
+	#cssmenu > ul td {
 		display: block;
 		position: relative;
 		margin: 0;

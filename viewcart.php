@@ -42,8 +42,11 @@ function reportError(request) {
 	   		<td><a href="#"><span>Reviews</span></a></td>
 	   		</tr>
 	   		
-	   	</table>	
-<div id="content">
+	   	</table>
+	   	
+	   	
+	   		
+<div id="cartcontent">
 <p>
 Your Shopping Cart contains:
 <?php
@@ -66,9 +69,10 @@ Your Shopping Cart contains:
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 							 }
    ?>
+</div>
 </p>
 <a href="checkout.php">Checkout</a>
 <a href="homepage.php">Back to homepage</a>
-</div>
+
 </body>
 </html>

@@ -98,7 +98,7 @@ function reportError(request) {
 				</div>
 			</div>
 			
-						
+					<?p	
 		<div id='cssmenu'>
 			
 			<table>
@@ -112,7 +112,19 @@ function reportError(request) {
 			</tr>
 			</table>
    	
-   		</div>	
+   		</div>
+   		?>
+   		
+   		
+   		<table border="0">
+   		<tr>
+	   		<td><a href="homepage.php"><span>Home</span></a></td>
+	   		<td><a href="catalogue.php"><span>Herbs & Spices</span></a></td>
+	   		<td><a href="#"><span>Contact</span></a></td>
+	   		<td><a href="#"><span>Reviews</span></a></td>
+	   		</tr>
+	   		
+	   	</table>
 
 </body>
 </html>

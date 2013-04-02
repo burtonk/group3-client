@@ -177,26 +177,24 @@ padding:10px;
 
 
 table.menu
-{	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;	background: #E1F8FF;
+{
+
+
+	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;	background: #E1F8FF;
 	border-collapse: collapse;	border-style: hidden;	
 	}
 	
-	th {
-	padding: .5 1em;
-	max-width: 250px;
-	border-bottom: 5px solid #097BB0;
-	}
-
+	
 
 td {
 padding: 20px;
 max-width: 250px;
+background-color: black;
+color: green;
 border-bottom: 1px solid #097BB0;
 }
 
 
-th {
-max-width: 250px;
-}
+
 
 

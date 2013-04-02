@@ -106,10 +106,10 @@ table.menu
 	border-collapse: collapse;	
 	border-style: hidden;	
 	background-color: black;
-	margin-top: 225px;
+	margin-top: 245px;
 	padding-right: 40px;
 	float:left;
-	margin-left: -20px;
+	margin-left: 20px;
 	
 	
 	}
@@ -123,8 +123,12 @@ border-bottom: 1px solid #097BB0;
 
 table.menu span{
 	color : green;
+	padding-right: 20px;
 }
 
+#logoh{
+	float: left;
+}
 
 
 

@@ -193,14 +193,14 @@ ul#cssmenu > ul, #cssmenu > ul ul {
 /* The container */
 #cssmenu > ul, #cssmenu > ul ul {
 	display: block;
-	position: relative;
+	/*position: relative;*/
 	width: 150px;
 }
 
 	/* The list elements which contain the links */
 	#cssmenu > ul td {
 		display: block;
-		position: relative;
+	/*	position: relative;*/
 		margin: 0;
 		padding: 0;
 		width: 150px;	

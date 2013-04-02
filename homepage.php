@@ -100,8 +100,8 @@ function reportError(request) {
 			
 				
    		
-   		<div id ="menu">
-   		<table border="0">
+   		
+   		  <table class ='menu'>
    		<tr>
 	   		<td><a href="homepage.php"><span>Home</span></a></td>
 	   		<td><a href="catalogue.php"><span>Herbs & Spices</span></a></td>
@@ -110,6 +110,6 @@ function reportError(request) {
 	   		</tr>
 	   		
 	   	</table>
-   		</div>
+   		
 </body>
 </html>

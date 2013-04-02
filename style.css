@@ -183,6 +183,9 @@ table.menu
 	font: 14px/24px Verdana, Arial, Helvetica, sans-serif;
 	border-collapse: collapse;	
 	border-style: hidden;	
+	border-top-right-radius: 4px;
+	background-color: black;
+	border-top-left-radius: 4px;
 	}
 	
 	

@@ -113,7 +113,7 @@ function reportError(request) {
 	   	
 	   			
    		<div id="hlogo">
-   		<a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="160"></a>
+   		<a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="210" height="250"></a>
    		</div>
    		
 </body>

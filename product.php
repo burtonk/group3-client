@@ -123,8 +123,8 @@ function reportError(request) {
 					$id = $_GET['id'];
 					
 					// Create connection
-					$con=mysqli_connect($host,$logname,$pass,$db);
-
+					//$con=mysqli_connect($host,$logname,$pass,$db);
+					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
 					// Check connection
 					if (mysqli_connect_errno($con)){
 						echo "Failed to connect to MySQL: " . mysqli_connect_error();

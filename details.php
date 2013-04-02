@@ -1,0 +1,1 @@
+<?php $host = "k.tfa.ie";$logname = "disney";$pass = "kandy";$db = "website";?>

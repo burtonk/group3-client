@@ -98,15 +98,17 @@ function reportError(request) {
 				</div>
 			</div>
 			
-			<div id='cssmenu'>
-<ul>
-<li class='active'><a href="homepage.php"><img src="gradinatas.jpg" alt="logo" width="160"></a></li> 
-   <li class='active'><a href="homepage.php"><span>Home</span></a></li>
-   <li class='has-sub'><a href='catalogue.php'><span>Products</span></a></li>
-   <li><a href='about.php'><span>About</span></a></li>
-   <li class='last'><a href='contact.php'><span>Contact</span></a></li>
-</ul>
-</div>
+ <table class ='menu'>
+   		<tr>
+   			
+	   		<td><a href="homepage.php"><span>Home</span></a></td>
+	   		<td><a href="catalogue.php"><span>Herbs & Spices</span></a></td>
+	   		<td><a href="#"><span>Contact</span></a></td>
+	   		<td><a href="#"><span>About</span></a></td>
+	   		<td><a href="#"><span>Reviews</span></a></td>
+	   		</tr>
+	   		
+	   	</table>
 			
 			<div id="products">
 			<?php

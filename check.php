@@ -43,12 +43,12 @@ header('Content-Type: text/html; charset=utf-8');
 				
 				
 				
-				$sql="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Item_Id)
+				$sql="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Item_Id,Email)
 				
 				
 				
 				VALUES
-				("$_POST['name']",'$_POST['Quantity'],$_POST['Total_Price'],$orderID)";
+				("$_POST['name']",'$_POST['Quantity'],$_POST['Total_Price'],$orderID,'niamh@tcd.ie')";
 
 
 

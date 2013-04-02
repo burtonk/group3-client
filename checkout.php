@@ -80,7 +80,7 @@ Your Shopping Cart contains:
 							<input type='hidden' name='Quantity' value='\''.$value['quantity'].'\''>
 							<input type='hidden' name='Total Price' value='\''.$value['price']*$value['quantity']'\''>	
 							<input type='hidden' name='Order_Item_Id' value='\''.$key.'\''>
-						";
+							<input type='hidden' name='Total_Price_All' value='\''$total'\''> ";						
 						}
 						echo" <input type='submit' value='checkout'>
 								</form>";
@@ -89,9 +89,9 @@ Your Shopping Cart contains:
 						
 						
 	
-	
+
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
-							 }
+
    ?>
 </p>
 <a href="homepage.php">Back to homepage</a>

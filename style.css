@@ -39,9 +39,11 @@ background-attachment: fixed;
 	margin-top: 200px;
 	color: green;
 	text-align: center;
-	margin-left: 40px;
-	margin-right: 60px;
-	padding-left: 30px;
+	margin-left: 80px;
+	margin-right: 100px;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top:20px;
 
 }
 

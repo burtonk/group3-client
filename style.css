@@ -28,9 +28,8 @@ float: right;
 	float: right;
 	text-align: center;
 	background: #ff690c;
-	padding: 10px;
+	padding: -10px;
 	margin-top: 20px;
-	margin-left: 30px;
 	border: 0px solid;
 	border-radius: 15px;
 }

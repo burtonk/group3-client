@@ -62,7 +62,7 @@
 
  setcookie(Key_my_site, $_POST['password'], $hour);	 
 
-
+ echo "<p> YAY</p>" 
 
  } 
 

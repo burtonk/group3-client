@@ -22,7 +22,7 @@ header('Content-Type: text/html; charset=utf-8');
 						}
 
 				$sql="INSERT INTO the_order (Email, Total_Price, 	Delivary_Address, Date1, Progress)
-				VALUES('niamh@tcd.ie',".$_POST['Total_Price_All'].",'AHHHH',CURDATE(),1)";
+				VALUES(".$_POST['Email'].",".$_POST['Total_Price_All'].",'AHHHH',CURDATE(),1)";
 				
 				echo $sql."<br />";
 				
@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=utf-8');
 				
 				
 				$sql2="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Id,Email)
-				VALUES('".$_POST['name'.$j.'']."',".$_POST['Quantity'.$j.''].",".$_POST['Total_Price'.$j.''].",".$orderID.",'niamh@tcd.ie')";
+				VALUES('".$_POST['name'.$j.'']."',".$_POST['Quantity'.$j.''].",".$_POST['Total_Price'.$j.''].",".$orderID.",".$_POST['Email'].")";
 
 				$result3 = mysqli_query($con,$sql2);
 

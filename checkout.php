@@ -29,6 +29,97 @@ function reportError(request) {
 
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+  // Connects to your Database
+
+ mysql_connect("k.tfa.ie", "disney", "kandy") or die(mysql_error());
+
+ mysql_select_db("website") or die(mysql_error());
+
+ //Checks if there is a login cookie
+
+ if(isset($_COOKIE['ID_my_site']))
+
+
+ //if there is, it logs you in and directes you to the members page
+
+ { 
+ 	$username = $_COOKIE['ID_my_site']; 
+
+ 	$pass = $_COOKIE['Key_my_site'];
+
+ 	 	$check = mysql_query("SELECT * FROM the_user WHERE Email = '$username' ")or die(mysql_error());
+
+ 	while($info = mysql_fetch_array( $check )) 	
+
+ 		{
+
+ 		if ($pass != $info['Password']) 
+
+ 			{
+                       //if user doesn't match
+			header("Location: homepage.php");
+
+ 			 			}
+
+ 		else
+
+ 			{
+			//do nothing
+
+                         //if everything is ok... 
+
+ 			}
+
+ 		}
+
+ }
+ else {
+    header("Location: login.php");
+
+  }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -89,11 +180,14 @@ Your Shopping Cart contains:
 							<input type='hidden' name='Quantity".$i."' value='".$value['quantity']."'>
 							<input type='hidden' name='Total Price".$i."' value='".$value['price']*$value['quantity']."'>	
 							<input type='hidden' name='Order_Item_Id".$i."' value='".$key."'>
+				
 							<input type='hidden' name='Total_Price_All' value='".$total."'> ";
 							$i++;
 						}
 						echo" 	<input type='hidden' name='i' value='".$i."'>
+								<input type='hidden' name='Email' value='".$username."'>
 								<input type='submit' value='checkout'>
+								<input type='hid
 								</form>";
 								
 								

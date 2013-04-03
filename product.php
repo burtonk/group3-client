@@ -173,7 +173,7 @@ function reportError(request) {
 				<table>
 					<tr>
 						
-						<form action=review.php; method="post">
+						<form action=review.php method="post">
 						<td>Your rating</td><td>
 						<input class="star required" type="radio" name="rating" value="1">
 						<input class="star" type="radio" name="rating" value="2">

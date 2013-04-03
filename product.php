@@ -163,7 +163,7 @@ function reportError(request) {
 						<td>
 							<?php
 							if($stock <= 0){echo "<p>Out of stock</p>";}
-							if($stock <= $min){echo "<p>Limited Stock </p>"
+							if($stock <= $min){echo "<p>Limited Stock </p>";}
 							else {echo "<a href='#' class='button' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'>ADD TO CART</a>";}
 							?>
 						</td>

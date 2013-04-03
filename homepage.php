@@ -54,7 +54,7 @@ function reportError(request) {
 			
 				
 				
-				<form class="form-1">
+				<form action=login.php method="post" class="form-1">
 				   <p class="field">
                    		<input type="text" name="login" placeholder="Username or email">
                    		<i class="icon-user icon-large"></i>

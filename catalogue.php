@@ -145,7 +145,7 @@ header('Content-Type: text/html; charset=utf-8');
 					
 								echo "<td><li class = 'active'><p><a href='product.php?id=".$PId.".php'>
 								<img src='".$img."' height='100' width='100'></a></li></p>
-								<p><span><i><a href='product.php?id=".$PId.".php'></i>
+								<p><span><i><a href='product.php?id=".$PId."'></i>
 								".$name."
 								(".$SName.")</a> </br> WEIGHT: ".$weight."</p></span>";
 								

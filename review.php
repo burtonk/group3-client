@@ -10,6 +10,6 @@ include "config/details.php";
 					}
 
 					$result = mysqli_query($con,"INSERT INTO reviews(Email,Stars,Comments,Date1,Time1,Product_Id) VALUES(\"".$_POST['email']."\",".$_POST['rating'].",\"".$_POST['comment']."\",CURDATE(),CURTIME(),".$_POST['id'].")");
-					header("Location: product.php?id=".$_POST['id']);
-
+					//header("Location: product.php?id=".$_POST['id']);
+					echo "INSERT INTO reviews(Email,Stars,Comments,Date1,Time1,Product_Id) VALUES(\"".$_POST['email']."\",".$_POST['rating'].",\"".$_POST['comment']."\",CURDATE(),CURTIME(),".$_POST['id'].")";
 ?>

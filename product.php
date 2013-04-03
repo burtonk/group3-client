@@ -139,6 +139,7 @@ function reportError(request) {
 					$img = $row['Img_location'];
 					$SName = $row['S_Name'];
 					$stock = $row['Stock_Level'];
+					$min = $row['Min_Level'];
 					$description = $row['Description'];
 					$weight = $row['Weight'];
 					} 
@@ -162,6 +163,7 @@ function reportError(request) {
 						<td>
 							<?php
 							if($stock <= 0){echo "<p>Out of stock</p>";}
+							if($stock <= $min){echo "<p>Limited Stock </p>"
 							else {echo "<a href='#' class='button' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'>ADD TO CART</a>";}
 							?>
 						</td>
@@ -170,7 +172,21 @@ function reportError(request) {
 				<h3>Reviews</h3>
 				<table>
 					<tr>
-						<form action="review.php" method="post">
+						<?php
+						 if (isset($_POST['Submit review'])) {
+	
+ 						if (!$_POST['rating'] |!$_POST['email'] ) {
+
+              						  die('You did not complete all of the required fields');
+
+        					}
+						date_default_timezone_set('UTC');
+						$insert = "INSERT INTO reviews (Email,Stars,Comments,Date1, Product_Id) VALUES ('".$_POST['email']."', '".$_POST['rating']."','".$_POST['comment']."',date(DATE_RFC822),$id)";
+
+        					$add_review = mysql_query($insert);
+
+						?>
+						<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 						<td>Your rating</td><td>
 						<input class="star required" type="radio" name="rating" value="1">
 						<input class="star" type="radio" name="rating" value="2">

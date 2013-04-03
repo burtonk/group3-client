@@ -180,6 +180,7 @@ function reportError(request) {
 						<input class="star" type="radio" name="rating" value="3">
 						<input class="star" type="radio" name="rating" value="4">
 						<input class="star" type="radio" name="rating" value="5"></td></tr>
+						<tr><td>Your name</td><td><input type="text" name="name"></td></tr>
 						<tr><td>Your email</td><td><input type="text" name="email"></td></tr>
 						<tr><td>Your comment</td><td><input type="text" name="comment"></td></tr>
 						<input type="hidden" name="id" value=<?php echo "\"".$id."\""; ?>>

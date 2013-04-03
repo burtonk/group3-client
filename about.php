@@ -112,7 +112,7 @@ function reportError(request) {
    			
 	   		<td><a href="homepage.php"><span>Home</span></a></td>
 	   		<td><a href="catalogue.php"><span>Herbs & Spices</span></a></td>
-	   		<td><a href="#"><span>Contact</span></a></td>
+	   		<td><a href="contact.php"><span>Contact</span></a></td>
 	   		<td><a href="about.php"><span>About</span></a></td>
 	   		<td><a href="CompanyReviews.php"><span>Reviews</span></a></td>
 	   		</tr>

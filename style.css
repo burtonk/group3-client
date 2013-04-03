@@ -28,9 +28,11 @@ float: right;
 	
 	text-align: center;
 	background: black;
-	color: red;
-	padding: -10px;
+	color: orange;
 	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
 	border: 0px solid;
 	border-radius: 15px;
 }
@@ -110,7 +112,7 @@ p.middle {
 
 
 #cartcontent{
-	float: left;
+	
 	margin-top: 100px;
 }
 

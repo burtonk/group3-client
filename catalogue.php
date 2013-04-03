@@ -139,6 +139,7 @@ header('Content-Type: text/html; charset=utf-8');
 							$img = $row['Img_location'];
 							$SName = $row['S_Name'];
 							$stock = $row['Stock_Level'];
+							$weight = $row['Weight'];
 							if($i % 2 == 0){
 							echo "</tr><tr>";}
 					
@@ -146,7 +147,8 @@ header('Content-Type: text/html; charset=utf-8');
 								<img src='".$img."' height='100' width='100'></a></li></p>
 								<p><span><i><a href='product.php?id=".$PId.".php'></i>
 								".$name."
-								(".$SName.")</a></p></span>";
+								(".$SName.")</a> Weight: ".$weight."</p></span>";
+								
 					
 							if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>
 								<i><p style='text-align:right;'>".$price."€</i></p>";

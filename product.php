@@ -200,6 +200,7 @@ function reportError(request) {
 					
 					while($row = mysqli_fetch_array($result)){
 					$email = $row['Email'];
+					$name = $row['Name'];
 					$rating = $row['Stars'];
 					$comment = $row['Comments'];
 					$date = $row['Date1'];
@@ -210,7 +211,7 @@ function reportError(request) {
 					
 					while($i < $rating){$stars.="<img src='images/star.png' alt='star'>"; $i++;}
 					
-					echo "<tr><td>Rated ".$stars." by ".$email." on ".$date." ".$time."</td></tr>
+					echo "<tr><td>Rated ".$stars." by ".$name." on ".$date." ".$time."</td></tr>
 					<tr><td>Comment : ".$comment."</td></tr>";
 					
 					} 

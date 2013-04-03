@@ -30,7 +30,9 @@ float: right;
 	background: black;
 	color: orange;
 	margin-top: 60px;
-	
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
 	border: 0px solid;
 	border-radius: 15px;
 }
@@ -68,35 +70,10 @@ background-attachment: fixed;
 }
 
 
-/*
-#content{
-background-color: white;
-margin-left: auto;
-margin-right: auto;
-width: 1000px;
-height: auto;
-}
-*/
-
-
 #header{
 padding:10px;
 }
 
-
-
-
-/*
-#products {
-text-align: center;
-*/
-
-
-p.middle {   
- 	margin-left: auto;
-     margin-right: auto;
-     width: 6em
-}
 
 
 
@@ -110,9 +87,6 @@ p.middle {
 
 
 #cartcontent{
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
 	margin-top: 100px;
 }
 
@@ -125,7 +99,6 @@ p.middle {
 }
 
 #previous_orders{
-	
 	margin-left: 450px;
 }
 

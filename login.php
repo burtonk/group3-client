@@ -10,11 +10,11 @@
  //Checks if there is a login cookie
  	if (!get_magic_quotes_gpc()) {
 
- 		$_POST['email'] = addslashes($_POST['email']);
+ 		$_POST['login'] = addslashes($_POST['login']);
 
  	}
 
- 	$check = mysql_query("SELECT * FROM the_user WHERE Email = '".$_POST['username']."'")or die(mysql_error());
+ 	$check = mysql_query("SELECT * FROM the_user WHERE Email = '".$_POST['login']."'")or die(mysql_error());
 
 
 
@@ -32,17 +32,17 @@
 
  {
 
- $_POST['pass'] = stripslashes($_POST['pass']);
+ $_POST['password'] = stripslashes($_POST['password']);
 
  	$info['Password'] = stripslashes($info['Password']);
 
- 	$_POST['pass'] = md5($_POST['pass']);
+ 	$_POST['password'] = md5($_POST['password']);
 
 
 
  //gives error if the password is wrong
 
- 	if ($_POST['pass'] != $info['Password']) {
+ 	if ($_POST['password'] != $info['Password']) {
 
  		die('Incorrect password, please try again.');
 
@@ -54,13 +54,13 @@
  
  // if login is ok then we add a cookie 
 
- 	 $_POST['username'] = stripslashes($_POST['username']); 
+ 	 $_POST['login'] = stripslashes($_POST['login']); 
 
  	 $hour = time() + 3600; 
 
- setcookie(ID_my_site, $_POST['username'], $hour); 
+ setcookie(ID_my_site, $_POST['login'], $hour); 
 
- setcookie(Key_my_site, $_POST['pass'], $hour);	 
+ setcookie(Key_my_site, $_POST['password'], $hour);	 
 
 
 

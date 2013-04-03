@@ -100,7 +100,7 @@
 							  echo "<p>" . $row['Email'] . "</p>";
 							  echo "<p>" . $row['Phone'] . "</p>";
 							  echo "<p>" . $row['ann'] . "</p>";
-							  echo "<a href='#'><input type='button' value='Change info'></a>";
+							
 	
 							  }
 						

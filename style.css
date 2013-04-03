@@ -130,7 +130,7 @@ table.menu
 
 td{
 padding: 20px;
-border-bottom: 1px solid #097BB0;
+border-bottom: 1px solid red;
 }
 
 table.menu span{

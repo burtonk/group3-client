@@ -163,7 +163,7 @@ function reportError(request) {
 						<td>
 							<?php
 							if($stock <= 0){echo "<p>Out of stock</p>";}
-							if($stock <= $min){echo "<p>Limited Stock </p>";}
+							//if($stock <= $min){echo "<p>Limited Stock </p>";}
 							else {echo "<a href='#' class='button' onClick='manageCart(\"add\",".$PId.",".$price.",\"".$name."\");'>ADD TO CART</a>";}
 							?>
 						</td>
@@ -175,17 +175,25 @@ function reportError(request) {
 						<?php
 						 if (isset($_POST['Submit review'])) {
 	
- 						if (!$_POST['rating'] |!$_POST['email'] ) {
+ 							if (!$_POST['rating'] |!$_POST['email'] ) {
 
-              						  die('You did not complete all of the required fields');
+              						 	 die('You did not complete all of the required fields');
 
-        					}
+        						}
+        					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
+					// Check connection
+						if (mysqli_connect_errno($con)){
+							echo "Failed to connect to MySQL: " . mysqli_connect_error();
+						}
+
 						date_default_timezone_set('UTC');
 						$insert = "INSERT INTO reviews (Email,Stars,Comments,Date1, Product_Id) VALUES ('".$_POST['email']."', '".$_POST['rating']."','".$_POST['comment']."',date(DATE_RFC822),$id)";
 
-        					$add_review = mysql_query($insert);
+        					$add_review = mysqli_query($con,$insert);
+						 }
 
 						?>
+						
 						<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
 						<td>Your rating</td><td>
 						<input class="star required" type="radio" name="rating" value="1">
@@ -198,7 +206,7 @@ function reportError(request) {
 						<input type="hidden" name="id" value=<?php echo "\"".$id."\""; ?>>
 						<tr><td><input type="submit" value="Submit review"></td><td /></tr>
 						</form>
-						<?php
+					<?php
 					
 					// Create connection
 					//$con=mysqli_connect($host,$logname,$pass,$db);

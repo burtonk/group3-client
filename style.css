@@ -132,7 +132,7 @@ td{
 padding: 20px;
 }
 
-table.menu span{
+table.menu a{
 	color : green;
 	padding-right: 40px;
 }

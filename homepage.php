@@ -33,7 +33,7 @@
  		else
 
  			{
- 			echo"<p style="text-align: right; color: red;>"Logged in as: ".$username."!</p>";
+ 			echo"<p style="text-align: right; color: red;">"Logged in as: ".$username."!</p>";
 		
 
 

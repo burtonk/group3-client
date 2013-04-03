@@ -172,29 +172,8 @@ function reportError(request) {
 				<h3>Reviews</h3>
 				<table>
 					<tr>
-						<?php
-						 if (isset($_POST['Submit review'])) {
-	
- 							if (!$_POST['rating'] |!$_POST['email'] ) {
-
-              						 	 die('You did not complete all of the required fields');
-
-        						}
-        					$con=mysqli_connect("k.tfa.ie","disney","kandy","website");
-					// Check connection
-						if (mysqli_connect_errno($con)){
-							echo "Failed to connect to MySQL: " . mysqli_connect_error();
-						}
-
-						date_default_timezone_set('UTC');
-						$insert = "INSERT INTO reviews (Email,Stars,Comments,Date1, Product_Id) VALUES ('".$_POST['email']."', '".$_POST['rating']."','".$_POST['comment']."',date(DATE_RFC822),$id)";
-
-        					$add_review = mysqli_query($con,$insert);
-						 }
-
-						?>
 						
-						<form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
+						<form action=review.php; ?> method="post">
 						<td>Your rating</td><td>
 						<input class="star required" type="radio" name="rating" value="1">
 						<input class="star" type="radio" name="rating" value="2">

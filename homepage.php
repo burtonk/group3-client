@@ -36,7 +36,6 @@
 			echo "<p> Logged in as: ".$username."! </p>";
 
 
-
  			}
 
  		}
@@ -164,6 +163,7 @@ function reportError(request) {
 	   		<td><a href="contact.php"><span>Contact</span></a></td>
 	   		<td><a href="about.php"><span>About</span></a></td>
 	   		<td><a href="CompanyReviews.php"><span>Reviews</span></a></td>
+	   		<td><a href="logout.php"><span>Logout</span></a></td>
 	   		</tr>
 	   		
 	   	</table>

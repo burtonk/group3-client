@@ -59,3 +59,6 @@ header('Content-Type: text/html; charset=utf-8');
 
 					mysqli_close($con);
 	?>
+	
+	
+	<a href="homepage.php">Back to homepage</a>

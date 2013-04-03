@@ -61,4 +61,3 @@ header('Content-Type: text/html; charset=utf-8');
 	?>
 	
 	
-	<a href="homepage.php">Back to homepage</a>

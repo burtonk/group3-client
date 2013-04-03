@@ -27,7 +27,8 @@ float: right;
 #products{
 	float: right;
 	text-align: center;
-	background: #077113;
+	background: black;
+	color: white;
 	padding: -10px;
 	margin-top: 60px;
 	border: 0px solid;

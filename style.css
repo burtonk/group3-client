@@ -25,7 +25,8 @@ float: right;
 }
 
 #products{
-	
+	border-collapse: collapse;	
+	border-style: hidden;
 	text-align: center;
 	background: black;
 	color: orange;

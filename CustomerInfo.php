@@ -87,7 +87,7 @@
 						  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 						}
 
-							$result = mysqli_query($con,"SELECT * FROM the_user WHERE Email = ".$username."");
+							$result = mysqli_query($con,"SELECT * FROM the_user WHERE Email = "$username"");
 							//NEEDS TO BE CHANGED TO SHOW DETAILS OF ONLY PERSON LOGGED IN
 						
 							

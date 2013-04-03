@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=utf-8');
 				
 				
 				$sql2="INSERT INTO order_item (Name_of_Product, Quantity, Total_Price,Order_Id,Email)
-				VALUES('".$_POST['name'.$j.'']."',".$_POST['Quantity'.$j.''].",".$_POST['Total_Price'.$j.''].",".$orderID.",".$_POST['Email'].")";
+				VALUES('".$_POST['name'.$j.'']."',".$_POST['Quantity'.$j.''].",".$_POST['Total_Price'.$j.''].",".$orderID.",'email')";
 
 				$result3 = mysqli_query($con,$sql2);
 

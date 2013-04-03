@@ -147,7 +147,7 @@ header('Content-Type: text/html; charset=utf-8');
 								<img src='".$img."' height='100' width='100'></a></li></p>
 								<p><span><i><a href='product.php?id=".$PId.".php'></i>
 								".$name."
-								(".$SName.")</a> Weight: ".$weight."</p></span>";
+								(".$SName.")</a> </br> WEIGHT: ".$weight."</p></span>";
 								
 					
 							if($stock <= 0){echo "<p><font color='red'>Out of stock</font></p>

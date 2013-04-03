@@ -29,7 +29,8 @@ float: right;
 	border-style: hidden;
 	text-align: center;
 	background: black;
-	color: #dbc4c4;
+	color: white;
+	
 	margin-left: auto;
 	margin-right: auto;
 	width: 600px;
@@ -117,7 +118,7 @@ table.menu
 	background-color: black;
 	margin-left: auto;
 	margin-right: auto;
-	color :#e8e1e1;
+	
 	border-radius: 5px;
 	padding-right: 40px;
 	margin-bottom: 60px;

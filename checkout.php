@@ -35,7 +35,7 @@ function reportError(request) {
 
 		
    		<div id="hlogo">
-   		<a href="homepage.php"><img src="Gradinatas.jpeg"alt="logo" width="210" height="200"></a>
+   		<a href="homepage.php"><img src="http://k.tfa.ie/pics/logo.gif"alt="logo" width="210" height="200"></a>
    		</div>
 		
 		

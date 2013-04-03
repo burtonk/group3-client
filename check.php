@@ -22,7 +22,7 @@ header('Content-Type: text/html; charset=utf-8');
 						}
 
 				$sql="INSERT INTO the_order (Email, Total_Price, 	Delivary_Address, Date1, Progress)
-				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].",'15 ',CURDATE(),1)";
+				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Delivery']."',CURDATE(),1)";
 				
 				echo $sql."<br />";
 				

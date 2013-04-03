@@ -131,6 +131,20 @@ Your Shopping Cart contains:
 						$total+=$value['price']*$value['quantity'];
 						
 						
+						$result = mysqli_query($con,"SELECT * FROM the_user WHERE Email = '$username' ");
+							//NEEDS TO BE CHANGED TO SHOW DETAILS OF ONLY PERSON LOGGED IN
+						
+							
+							while($row = mysqli_fetch_array($result))
+							  {
+							   $temp =$row['Delivery_address'];
+							
+							  }
+						
+						
+						
+						
+						
 						
 						
 						echo"	
@@ -145,6 +159,7 @@ Your Shopping Cart contains:
 						}
 						echo" 	<input type='hidden' name='i' value='".$i."'>
 								<input type='hidden' name='Email' value='".$username."'>
+								<input type='hidden' name='Address' value='".$temp['Delivery_address']."'>
 								<input type='submit' value='checkout'>
 								<input type='hid
 								</form>";

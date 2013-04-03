@@ -1040,7 +1040,7 @@ $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
         else if (tag == 'select') {
             this.selectedIndex = -1;
         }
-  	else if (t == "file") {
+		else if (t == "file") {
 			if (/MSIE/.test(navigator.userAgent)) {
 				$(this).replaceWith($(this).clone());
 			} else {

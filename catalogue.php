@@ -98,10 +98,7 @@ header('Content-Type: text/html; charset=utf-8');
 				
 					</div>
 					
-			</div>
-			<div id="hlogo">
-   				<a href="homepage.php"><img src="http://k.tfa.ie/pics/logo.gif"alt="logo" width="210" height="200"></a>
-   			</div>
+
 			<div id="hlogo">
    				<a href="homepage.php"><img src="http://k.tfa.ie/pics/logo.gif"alt="logo" width="210" height="200"></a>
    			</div>

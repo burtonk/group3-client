@@ -24,10 +24,8 @@ header('Content-Type: text/html; charset=utf-8');
 				//inserts customer and cart details in the_order table in the database.
 				$sql="INSERT INTO the_order (Email, Total_Price, Delivary_Address, Date1, Progress)
 <<<<<<< HEAD
-				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Address]."',CURDATE(),1)";
-=======
-				VALUES( '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Delivery']."',CURDATE(),1)";
->>>>>>> alex checkout change
+				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Address']."',CURDATE(),1)";
+
 				
 				echo $sql."<br />";
 				

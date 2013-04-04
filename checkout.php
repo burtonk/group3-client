@@ -54,11 +54,11 @@ function reportError(request) {
  	while($info = mysql_fetch_array( $check )) 	
 
  		{
-
+	 	//check if username and password match the database
  		if ($pass != $info['Password']) 
 
  			{
-                       //if user doesn't match
+            //if user doesn't match redirect to homepage, user cannot check out if not logged in
 			header("Location: homepage.php");
 
  			 			}
@@ -66,9 +66,7 @@ function reportError(request) {
  		else
 
  			{
-			//do nothing
-
-                         //if everything is ok... 
+			
 
  			}
 
@@ -112,27 +110,31 @@ Your Shopping Cart contains:
    if(empty($content)){echo "Your cart is currently empty";}
    	else {
 						$total = 0;
+						//form to be sent to check.php to allow for checkout
 						echo "<table>
 						<form method='post' action='check.php'>";
 						
 						$i = 0;
 						
 						foreach($content as $key=>$value){
-						
-
+						//cart in sidebar
+							//remove item already in cart
 						echo "<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=		\"manageCart('remove',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".$value['quantity'];
-
+						
+						//check if enough stock left to add it to the cart
 						if($value['stockLeft'] > 0){
+						//increase quantity of item already in cart.
 						echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='+'></a>";
 						
 						}
 
 						echo "</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
+						//calculate the total cost of the individual product
 						$total+=$value['price']*$value['quantity'];
 						
-						
+						//gets the address of the customer currently loged in
 						$result = mysqli_query($con,"SELECT * FROM the_user WHERE Email = '$username' ");
-							//NEEDS TO BE CHANGED TO SHOW DETAILS OF ONLY PERSON LOGGED IN
+							
 						
 							
 							while($row = mysqli_fetch_array($result))
@@ -145,10 +147,10 @@ Your Shopping Cart contains:
 						
 						
 						
-						
-						
+						//form to be sent to check.php giving the details of the customer and cart to be added to order in database.
+							//order details, accessed from cart.
 						echo"	
-						
+							
 							<input type='hidden' name='name".$i."' value='".$value['name']."'>	
 							<input type='hidden' name='Quantity".$i."' value='".$value['quantity']."'>
 							<input type='hidden' name='Total Price".$i."' value='".$value['price']*$value['quantity']."'>	
@@ -157,6 +159,7 @@ Your Shopping Cart contains:
 							<input type='hidden' name='Total_Price_All' value='".$total."'> ";
 							$i++;
 						}
+						//customer details--accessed from login
 						echo" 	<input type='hidden' name='i' value='".$i."'>
 								<input type='hidden' name='Email' value='".$username."'>
 								<input type='hidden' name='Address' value='".$temp['Address']."'>
@@ -168,7 +171,7 @@ Your Shopping Cart contains:
 						
 						
 	
-
+								//total order amount
 						echo "<tr><td>Total</td><td colspan='2' align='right'>".$total."€</td></tr></table>"; 
 						
 						}

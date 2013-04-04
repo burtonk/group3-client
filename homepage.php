@@ -1,4 +1,6 @@
 <?php
+	//homepage.php is the welcome page of the site. It displays the companies welcome message, lets the customer log in to their account, and has
+	//links to all the main elements of the site.
   // Connects to your Database
 
  mysql_connect("k.tfa.ie", "disney", "kandy") or die(mysql_error());
@@ -126,15 +128,16 @@ function reportError(request) {
 						if(empty($content)){echo "Your cart is currently empty";}
 						else {
 						$total = 0;
+						//current cart displayed in right-hand sidebar
 						echo "<table>";
 						foreach($content as $key=>$value){
-						
+						//allow contents of cart to be incremented or decremented
 						echo 	"<tr><td>".$value['name']."</td><td align='right'><a href='#' onClick=\"manageCart('remove',".$key.",".											$value['price'].",'".$value['name']."',".$value['stockLeft'].");\"><input type='button' value='-'></a>".										$value['quantity'];
-						
+						//check if enough stock left to add it to cart
 						if($value['stockLeft'] > 0){
 							echo "<a href='#' onClick=\"manageCart('add',".$key.",".$value['price'].",'".$value['name']."',".												$value['stockLeft'].");\"><input type='button' value='+'></a>";
 						}
-						
+						//display price, quantity and total in sidebar
 						echo 	"</td><td align='right'>".$value['price']*$value['quantity']."€</td></tr>"; 
 								$total+=$value['price']*$value['quantity'];
 						}

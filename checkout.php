@@ -137,7 +137,7 @@ Your Shopping Cart contains:
 							
 							while($row = mysqli_fetch_array($result))
 							  {
-							   $temp =$row['Delivery_address'];
+							   $temp =$row['Address'];
 							
 							  }
 						
@@ -159,7 +159,7 @@ Your Shopping Cart contains:
 						}
 						echo" 	<input type='hidden' name='i' value='".$i."'>
 								<input type='hidden' name='Email' value='".$username."'>
-								<input type='hidden' name='Address' value='".$temp['Delivery_address']."'>
+								<input type='hidden' name='Address' value='".$temp['Address']."'>
 								<input type='submit' value='checkout'>
 								<input type='hid
 								</form>";

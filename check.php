@@ -21,7 +21,7 @@ header('Content-Type: text/html; charset=utf-8');
 						  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 						}
 
-				$sql="INSERT INTO the_order (Email, Total_Price, 	Delivary_Address, Date1, Progress)
+				$sql="INSERT INTO the_order (Email, Total_Price, Delivary_Address, Date1, Progress)
 				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Delivery']."',CURDATE(),1)";
 				
 				echo $sql."<br />";

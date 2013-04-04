@@ -57,6 +57,7 @@ header('Content-Type: text/html; charset=utf-8');
 					}
 					
 					echo "Order has been added";
+					echo "test";
 					echo "test adresse : ".$_POST['Address'];
 
 					mysqli_close($con);

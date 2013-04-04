@@ -56,7 +56,7 @@ header('Content-Type: text/html; charset=utf-8');
 					echo $sql2."<br />";
 					}
 					
-					echo "Order has been added";
+				//	echo "Order has been added";
 					echo "test";
 					echo "test adresse : ".$_POST['Address'];
 

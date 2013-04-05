@@ -55,14 +55,8 @@ header('Content-Type: text/html; charset=utf-8');
 					$j++;
 				//	echo $sql2."<br />";
 					}
-					
-<<<<<<< HEAD
-				//	echo "Order has been added";
-					echo "test";
-					echo "test adresse : ".$_POST['Address'];
-=======
-					echo "You have placed an order!";
->>>>>>> checkout
+		echo "You have placed an order!";
+
 
 					mysqli_close($con);
 	?>

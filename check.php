@@ -26,7 +26,7 @@ header('Content-Type: text/html; charset=utf-8');
 				VALUES(  '".$_POST['Email']."',  ".$_POST['Total_Price_All'].", '".$_POST['Address']."',CURDATE(),1)";
 
 				
-				echo $sql."<br />";
+			//	echo $sql."<br />";
 				
 				$result = mysqli_query($con,$sql);
 				
@@ -53,12 +53,16 @@ header('Content-Type: text/html; charset=utf-8');
 				$result3 = mysqli_query($con,$sql2);
 
 					$j++;
-					echo $sql2."<br />";
+				//	echo $sql2."<br />";
 					}
 					
+<<<<<<< HEAD
 				//	echo "Order has been added";
 					echo "test";
 					echo "test adresse : ".$_POST['Address'];
+=======
+					echo "You have placed an order!";
+>>>>>>> checkout
 
 					mysqli_close($con);
 	?>

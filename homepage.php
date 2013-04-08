@@ -146,8 +146,9 @@ function reportError(request) {
 							 }
 					?>
 					<a href="viewcart.php"><input type="button" value="View your cart"></a>
+						<a href = "registration.php"><input type="button" value="Not Registered?Register here"></a>
 				</div>
-				<a href = "registration.php"><input type="button" value="Not Registered?Register here"></a>
+			
 			</div>
 			
 		

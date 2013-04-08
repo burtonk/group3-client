@@ -88,7 +88,7 @@ function reportError(request) {
 			
 			</div>
 
-
+			<a href="registration.php"><span>Register</span></a>
 
 		
 		<div id="top-right">

@@ -88,7 +88,7 @@ function reportError(request) {
 			
 			</div>
 
-			<a href="registration.php"><span>Register</span></a>
+		
 
 		
 		<div id="top-right">
@@ -147,6 +147,7 @@ function reportError(request) {
 					?>
 					<a href="viewcart.php"><input type="button" value="View your cart"></a>
 				</div>
+					<a href="registration.php"><span>Register</span></a>
 			</div>
 			
 		

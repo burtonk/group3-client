@@ -89,6 +89,7 @@ or die(mysql_error());
  <h1>Registered</h1>
 
  <p>Thank you, you have registered - you may now login</a>.</p>
+ <td><a href="homepage.php"><span>Login</span></a></td>
 
  <?php 
  } 
